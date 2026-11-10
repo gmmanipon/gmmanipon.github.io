@@ -4,165 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Glaiza Miel | Online Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4eee5;
-            color: #4b3628;
-        }
-
-        header {
-            background-color: #6f4e37;
-            padding: 20px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        nav button {
-            background: transparent;
-            color: white;
-            border: 1px solid white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-
-        nav button:hover,
-        nav button.active {
-            background-color: #e8d5bd;
-            color: #4b3628;
-        }
-
-        main {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .page {
-            display: none;
-        }
-
-        .page.active {
-            display: block;
-        }
-
-        .home-content {
-            min-height: 75vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-            text-align: center;
-        }
-
-        .home-content img {
-            width: 230px;
-            height: 230px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 6px solid #b89b7b;
-        }
-
-        .home-text h1 {
-            font-size: 42px;
-            color: #6f4e37;
-            margin-bottom: 10px;
-        }
-
-        .home-text h2 {
-            font-size: 22px;
-            font-weight: normal;
-            margin-bottom: 15px;
-        }
-
-        .home-text p {
-            font-size: 17px;
-            line-height: 1.7;
-        }
-
-        .about-heading {
-            text-align: center;
-            font-size: 35px;
-            color: #6f4e37;
-            margin-bottom: 30px;
-        }
-
-        .about-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .info-card {
-            background-color: #fffaf3;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(80, 55, 35, 0.12);
-            margin-bottom: 20px;
-        }
-
-        .info-card h2 {
-            color: #8b6246;
-            margin-bottom: 20px;
-            font-size: 23px;
-        }
-
-        .info-card p {
-            line-height: 1.8;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .info-card strong {
-            color: #6f4e37;
-        }
-
-        .quote {
-            font-style: italic;
-            color: #8b6246;
-        }
-
-        @media (max-width: 700px) {
-            .about-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .home-text h1 {
-                font-size: 32px;
-            }
-
-            main {
-                margin: 20px auto;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
         <nav>
-            <button class="active" onclick="showPage('home', this)">
+            <button class="nav-btn active"
+                onclick="showPage('home', this)">
                 HOME
             </button>
 
-            <button onclick="showPage('personal', this)">
+            <button class="nav-btn"
+                onclick="showPage('personal', this)">
                 PERSONAL INFORMATION
             </button>
         </nav>
@@ -172,101 +30,140 @@
 
         <!-- HOME PAGE -->
         <section id="home" class="page active">
+
             <div class="home-content">
 
-                <img src="photo.jpg" alt="Glaiza Miel's Photo"
-                     onerror="this.style.display='none'">
+                <div class="home-image">
+                    <img src="photo.jpg"
+                         alt="Glaiza Miel's Photo">
+                </div>
 
                 <div class="home-text">
+
+                    <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
                     <h1>Glaiza Miel G. Manipon</h1>
+
                     <h2>Future Writer</h2>
+
                     <p>
                         Welcome to my online portfolio!
                         This website shares my personal information,
                         experiences, achievements, and goals in life.
+                        It represents my journey as a student and
+                        my continuous growth as a person.
                     </p>
+
+                    <button class="learn-btn"
+                        onclick="showPage('personal',
+                        document.querySelectorAll('.nav-btn')[1])">
+                        LEARN MORE
+                    </button>
+
                 </div>
 
             </div>
+
         </section>
 
-        <!-- PERSONAL INFORMATION PAGE -->
-        <section id="personal" class="page">
 
-            <h1 class="about-heading">PERSONAL INFORMATION</h1>
+        <!-- PERSONAL INFORMATION PAGE -->
+        <section id="personal" class="page personal-page">
+
+            <div class="about-heading">
+                <p>GET TO KNOW ME</p>
+                <h1>PERSONAL INFORMATION</h1>
+            </div>
 
             <div class="about-layout">
 
                 <!-- LEFT COLUMN -->
                 <div class="about-left">
 
-                    <div class="info-card">
-                        <h2>Personal Information</h2>
+                    <h2>Personal Details</h2>
 
-                        <p><strong>Full Name:</strong>
-                            Glaiza Miel G. Manipon
-                        </p>
+                    <div class="info-item">
+                        <strong>Full Name</strong>
+                        <span>Glaiza Miel G. Manipon</span>
+                    </div>
 
-                        <p><strong>Birthday:</strong>
-                            May 15, 2008
-                        </p>
+                    <div class="info-item">
+                        <strong>Birthday</strong>
+                        <span>May 15, 2008</span>
+                    </div>
 
-                        <p><strong>Address:</strong>
-                            Skyview, Virac, Itogon, Benguet
-                        </p>
+                    <div class="info-item">
+                        <strong>Address</strong>
+                        <span>Skyview, Virac, Itogon, Benguet</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Interests</strong>
+                        <span>Writing, Reading, and Sports</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Hobbies</strong>
+                        <span>Creating Articles and Learning New Things</span>
                     </div>
 
                 </div>
+
 
                 <!-- RIGHT COLUMN -->
                 <div class="about-right">
 
                     <div class="info-card">
+
                         <h2>My Goals in Life</h2>
 
                         <p>
-                            My goal is to finish my studies, improve my
-                            skills, and become successful in my chosen
-                            career. I want to make my family proud and
-                            use my knowledge to help others.
+                            My goal is to finish my studies, improve
+                            my skills, and become successful in my
+                            chosen career. I want to make my family
+                            proud and use my knowledge to help others.
                         </p>
+
                     </div>
 
                     <div class="info-card">
+
                         <h2>My Motto</h2>
 
-                        <p class="quote">
+                        <p class="motto">
                             "With faith, patience, and hard work,
                             I will turn my dreams into reality."
                         </p>
+
                     </div>
 
                 </div>
 
             </div>
+
         </section>
 
     </main>
 
+
     <script>
+
         function showPage(pageId, button) {
 
-            // Hide all pages
-            document.querySelectorAll('.page').forEach(function(page) {
+            document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
             });
 
-            // Show selected page
             document.getElementById(pageId).classList.add('active');
 
-            // Remove active style from all buttons
-            document.querySelectorAll('nav button').forEach(function(btn) {
+            document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
 
-            // Highlight selected button
             button.classList.add('active');
+
         }
+
     </script>
 
 </body>
