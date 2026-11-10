@@ -1,240 +1,262 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glaiza Miel | Personal Portfolio</title>
-
-    <!-- Connect the CSS file -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glaiza Miel | Personal Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- HEADER -->
 <header>
-    <div class="logo">GLAIZA MIEL.</div>
-
     <nav>
         <button class="active" onclick="showPage(0)">Home</button>
-        <button onclick="showPage(1)">About Me</button>
-        <button onclick="showPage(2)">Achievements</button>
+        <button onclick="showPage(1)">Personal Background</button>
     </nav>
 </header>
 
-<!-- HOME PAGE -->
-<section class="page active" id="home">
-    <div class="home-content">
+<main>
 
-        <div class="home-text">
-            <div class="greeting">HELLO! WELCOME</div>
+    <!-- PAGE 1: HOME -->
+    <section class="page active">
 
-            <h1>I'm Glaiza Miel G. Manipon</h1>
+        <div class="home-content">
 
-            <p>
-                A Bachelor of Science in Information Technology student
-                who is passionate about learning, exploring technology,
-                and improving my skills. I also enjoy writing articles,
-                especially sports articles, where I can share stories
-                and highlight the achievements of athletes.
-            </p>
+            <div class="home-text">
+                <h3>HELLO! WELCOME</h3>
 
-            <div class="tagline">
-                Student | Future IT Professional | Future Writer
+                <h1>I'm Glaiza Miel G. Manipon</h1>
+
+                <p>
+                    A Bachelor of Science in Information Technology
+                    student who is passionate about learning,
+                    exploring technology, and improving my skills.
+                    I also enjoy writing articles, especially sports
+                    articles, where I can share stories and highlight
+                    the achievements of athletes.
+                </p>
+
+                <p class="tagline">
+                    Student | Future IT Professional | Future Writer
+                </p>
             </div>
+
+            <!-- PERSONAL PHOTO -->
+            <div class="photo-container">
+
+                <img id="profilePhoto"
+                     class="home-photo"
+                     alt="Glaiza Miel's Photo">
+
+                <div id="photoPlaceholder" class="photo-placeholder">
+                    <span style="font-size:40px;">📷</span>
+                    <p>Your photo will appear here.</p>
+                </div>
+
+            </div>
+
         </div>
 
-        <img src="photo.jpg"
-             alt="Glaiza Miel's Photo"
-             class="home-photo">
-
-    </div>
-</section>
-
-<!-- ABOUT ME PAGE -->
-<section class="page" id="about">
-
-    <div class="section-heading">
-        <small>GET TO KNOW ME</small>
-        <h1>About Me</h1>
-        <p>A little introduction to who I am, what I value, and the future I am working toward.</p>
-    </div>
-
-    <div class="about-content">
-
-        <div class="about-card">
-            <h2>Personal Information</h2>
-
-            <p>
-                I am Glaiza Miel G. Manipon, a student who continues
-                to learn, grow, and discover my abilities. I value
-                every experience because it helps me become a better
-                version of myself. I enjoy learning new things,
-                creating articles, and spending time on activities
-                that help me improve.
-            </p>
-
-            <div class="info-row">
-                <strong>Full Name</strong>
-                <span>Glaiza Miel G. Manipon</span>
-            </div>
-
-            <div class="info-row">
-                <strong>Course</strong>
-                <span>BS Information Technology</span>
-            </div>
-
-            <div class="info-row">
-                <strong>Location</strong>
-                <span>Virac, Itogon, Benguet</span>
-            </div>
-
-            <div class="info-row">
-                <strong>Hobbies</strong>
-                <span>Writing and exploring technology</span>
-            </div>
-
-            <div class="info-row">
-                <strong>Interests</strong>
-                <span>Sports articles and IT</span>
-            </div>
+        <div class="bottom-navigation">
+            <button onclick="showPage(1)">Next →</button>
         </div>
 
-        <div class="about-card">
-            <h2>My Goals in Life</h2>
+    </section>
 
-            <p>
-                One of my goals is to become a successful IT
-                professional who can use technology to create
-                meaningful solutions and help others. I also want
-                to continue developing my writing skills, especially
-                in sports journalism.
-            </p>
 
-            <p>
-                I know that reaching my dreams will take time,
-                patience, and hard work. I will continue to learn
-                from my experiences, accept challenges, and trust
-                the path that God has prepared for me.
-            </p>
+    <!-- PAGE 2: PERSONAL BACKGROUND -->
+    <section class="page">
 
-            <h2>My Motto</h2>
-
-            <p class="motto">
-                "With faith, determination, and hard work,
-                anything is possible."
-            </p>
-
-            <p>
-                I will continue to trust God's plan, stay determined,
-                and give my best in everything I do.
-            </p>
+        <div class="section-heading">
+            <h1>Personal Background</h1>
+            <p>Get to know me, my education, interests, and dreams.</p>
         </div>
 
-    </div>
+        <div class="cards">
 
-    <div class="page-navigation">
-        <button onclick="showPage(0)">← Home</button>
-        <button onclick="showPage(2)">Next →</button>
-    </div>
+            <!-- PERSONAL INFORMATION -->
+            <div class="card about-card">
 
-</section>
+                <div class="emoji">🌷</div>
+                <h3>Personal Information</h3>
 
-<!-- ACHIEVEMENTS PAGE -->
-<section class="page" id="achievements">
+                <hr>
 
-    <div class="section-heading">
-        <small>MY JOURNEY AND PROGRESS</small>
-        <h1>My Achievements</h1>
-    </div>
+                <div class="personal-info">
 
-    <p class="achievement-intro">
-        Every achievement represents the hard work, dedication,
-        and experiences that helped me grow throughout my school years.
-    </p>
+                    <p>
+                        <strong>Full Name:</strong><br>
+                        Glaiza Miel G. Manipon
+                    </p>
 
-    <div class="achievement-grid">
+                    <p>
+                        <strong>Birthday:</strong><br>
+                        May 15, 2008
+                    </p>
 
-        <div class="achievement-card">
-            <h2>Elementary</h2>
+                    <p>
+                        <strong>Phone:</strong><br>
+                        09564624448
+                    </p>
 
-            <div class="school-name">
-                Balatoc Elementary School
+                    <p>
+                        <strong>Email:</strong><br>
+                        maniponglaiza41@gmail.com
+                    </p>
+
+                    <p>
+                        <strong>Address:</strong><br>
+                        Skyview, Virac, Itogon, Benguet
+                    </p>
+
+                </div>
+
             </div>
 
-            <ul>
-                <li>Consistent Honor Student</li>
-            </ul>
-        </div>
 
-        <div class="achievement-card">
-            <h2>Junior High School</h2>
+            <!-- EDUCATION -->
+            <div class="card">
 
-            <div class="school-name">
-                Saint Louis High School of Balatoc, Inc.
+                <div class="emoji">🎓</div>
+                <h3>Education</h3>
+
+                <p>
+                    I completed my elementary education at
+                    Balatoc Elementary School. I continued my
+                    junior and senior high school education at
+                    Saint Louis High School of Balatoc, Inc.,
+                    where I took the STEM strand during senior
+                    high school.
+                </p>
+
+                <p>
+                    I am proud to have received honors since
+                    elementary school because these achievements
+                    remind me of the importance of hard work
+                    and perseverance.
+                </p>
+
+                <p>
+                    I am currently pursuing a Bachelor of Science
+                    in Information Technology (BSIT) in college.
+                </p>
+
             </div>
 
-            <ul>
-                <li>Consistent Honor Student</li>
-                <li>Special Award in Maidens of the Altar</li>
-                <li>Sports Writer Award</li>
-            </ul>
-        </div>
 
-        <div class="achievement-card">
-            <h2>Senior High School</h2>
+            <!-- HOBBIES AND INTERESTS -->
+            <div class="card">
 
-            <div class="school-name">
-                Saint Louis High School of Balatoc, Inc.
+                <div class="emoji">✍️</div>
+                <h3>Hobbies and Interests</h3>
+
+                <p>
+                    I enjoy learning new things and exploring
+                    my interests. I am especially interested
+                    in writing articles, particularly sports
+                    articles.
+                </p>
+
+                <p>
+                    I like how sports writing shares athletes'
+                    stories, highlights their achievements,
+                    and informs readers about important events.
+                    I also enjoy activities that help me improve
+                    my creativity and communication skills.
+                </p>
+
             </div>
 
-            <ul>
-                <li>Consistent With Honors</li>
-                <li>Best in Research Award</li>
-                <li>Sports Writer Award</li>
-                <li>Maidens of the Altar Award</li>
-            </ul>
+
+            <!-- MY GOALS -->
+            <div class="card">
+
+                <div class="emoji">✨</div>
+                <h3>My Goals</h3>
+
+                <p>
+                    One of my goals is to finish my education
+                    and build a successful future. I want to
+                    improve my knowledge and skills, especially
+                    in technology and writing.
+                </p>
+
+                <p>
+                    I know that reaching my dreams requires
+                    patience, dedication, and faith. I will
+                    continue working hard, trusting God's plan,
+                    and learning from every challenge I face.
+                </p>
+
+            </div>
+
         </div>
 
-    </div>
+        <div class="bottom-navigation">
+            <button onclick="showPage(0)">← Previous</button>
+        </div>
 
-    <p class="achievement-note">
-        These achievements remind me that every effort matters.
-        They inspire me to continue learning, improving, and doing
-        my best in every opportunity. I am grateful for the people
-        who guided and supported me along the way.
-    </p>
+    </section>
 
-    <div class="page-navigation">
-        <button onclick="showPage(1)">← About Me</button>
-        <button onclick="showPage(0)">Back to Home</button>
-    </div>
+</main>
 
-</section>
-
-<!-- FOOTER -->
-<footer>
-    © 2026 Glaiza Miel G. Manipon | IT Personal Portfolio
-</footer>
-
-<!-- JAVASCRIPT -->
 <script>
+
+/* SWITCH BETWEEN PAGES */
 function showPage(index) {
+
     const pages = document.querySelectorAll(".page");
     const buttons = document.querySelectorAll("nav button");
 
-    pages.forEach(page => {
-        page.classList.remove("active");
+    pages.forEach((page, i) => {
+        page.classList.toggle("active", i === index);
     });
 
-    buttons.forEach(button => {
-        button.classList.remove("active");
+    buttons.forEach((button, i) => {
+        button.classList.toggle("active", i === index);
     });
 
-    pages[index].classList.add("active");
-    buttons[index].classList.add("active");
 }
+
+/* AUTOMATIC PHOTO DETECTION */
+const possiblePhotos = [
+    "photo.jpg",
+    "photo.jpeg",
+    "photo.png",
+    "photo.webp",
+    "photo.JPG",
+    "photo.PNG"
+];
+
+function loadProfilePhoto(index = 0) {
+
+    const photo = document.getElementById("profilePhoto");
+    const placeholder = document.getElementById("photoPlaceholder");
+
+    if (index >= possiblePhotos.length) {
+        photo.style.display = "none";
+        placeholder.style.display = "block";
+        placeholder.innerHTML =
+            "📷<br>Photo not found.<br>Check your photo filename and folder.";
+        return;
+    }
+
+    photo.onerror = function() {
+        loadProfilePhoto(index + 1);
+    };
+
+    photo.onload = function() {
+        photo.style.display = "block";
+        placeholder.style.display = "none";
+    };
+
+    photo.src = possiblePhotos[index];
+}
+
+loadProfilePhoto();
+
 </script>
 
 </body>
