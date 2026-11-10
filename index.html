@@ -1,254 +1,149 @@
 
-/* GENERAL SETTINGS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glaiza Miel | Online Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <button class="nav-btn active" onclick="showPage('home', this)">
+            HOME
+        </button>
+
+        <button class="nav-btn" onclick="showPage('personal', this)">
+            PERSONAL INFORMATION
+        </button>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
+
+        <div class="home-content">
+
+            <div class="home-image">
+                <img src="photo.jpg" alt="Glaiza Miel's Photo">
+            </div>
+
+            <div class="home-text">
+                <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+                <h1>Glaiza Miel G. Manipon</h1>
+
+                <h2>Future Writer</h2>
+
+                <p>
+                    Welcome to my online portfolio! This website shares
+                    my personal information, experiences, achievements,
+                    and goals in life. It represents my journey as a
+                    student and my continuous growth as a person.
+                </p>
+
+                <button class="learn-btn"
+                    onclick="showPage('personal',
+                    document.querySelectorAll('.nav-btn')[1])">
+                    LEARN MORE
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PERSONAL INFORMATION PAGE -->
+    <section id="personal" class="page personal-page">
+
+        <div class="about-heading">
+            <p>GET TO KNOW ME</p>
+        </div>
+
+        <div class="about-layout">
+
+            <div class="about-left">
+
+                <h2>Personal Details</h2>
+
+                <div class="info-item">
+                    <strong>Full Name</strong>
+                    <span>Glaiza Miel G. Manipon</span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Birthday</strong>
+                    <span>May 15, 2008</span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Address</strong>
+                    <span>Skyview, Virac, Itogon, Benguet</span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Interests</strong>
+                    <span>Writing, Reading, and Sports</span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Hobbies</strong>
+                    <span>Creating Articles and Learning New Things</span>
+                </div>
+
+            </div>
+
+
+            <div class="about-right">
+
+                <div class="info-card">
+                    <h2>My Goals in Life</h2>
+
+                    <p>
+                        My goal is to finish my studies, improve my
+                        skills, and become successful in my chosen
+                        career. I want to make my family proud and
+                        use my knowledge to help others.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h2>My Motto</h2>
+
+                    <p class="motto">
+                        "With faith, patience, and hard work,
+                        I will turn my dreams into reality."
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<script>
+function showPage(pageId, button) {
+
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    document.getElementById(pageId).classList.add('active');
+
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    button.classList.add('active');
 }
+</script>
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4eee5;
-    color: #4b3528;
-    min-height: 100vh;
-}
-
-/* NAVIGATION */
-header {
-    background-color: #6f4e37;
-    padding: 20px;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.nav-btn {
-    border: 1px solid white;
-    background: transparent;
-    color: white;
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    letter-spacing: 1px;
-    border-radius: 20px;
-    transition: 0.3s;
-}
-
-.nav-btn:hover,
-.nav-btn.active {
-    background-color: #d6b99b;
-    color: #4b3528;
-}
-
-/* PAGE DISPLAY */
-.page {
-    display: none;
-    min-height: calc(100vh - 70px);
-}
-
-.page.active {
-    display: block;
-}
-
-/* HOME PAGE */
-#home {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 8%;
-}
-
-#home.active {
-    display: flex;
-}
-
-.home-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    max-width: 1100px;
-    width: 100%;
-}
-
-.home-image img {
-    width: 280px;
-    height: 350px;
-    object-fit: cover;
-    border: 8px solid #fffaf4;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-}
-
-.home-text {
-    max-width: 550px;
-}
-
-.welcome {
-    color: #9b7653;
-    letter-spacing: 3px;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.home-text h1 {
-    font-size: 42px;
-    color: #6f4e37;
-    margin-bottom: 10px;
-}
-
-.home-text h2 {
-    font-size: 21px;
-    color: #a17b58;
-    margin-bottom: 20px;
-    font-weight: normal;
-}
-
-.home-text p {
-    line-height: 1.8;
-    font-size: 16px;
-}
-
-.learn-btn {
-    margin-top: 25px;
-    padding: 13px 25px;
-    background-color: #6f4e37;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.learn-btn:hover {
-    background-color: #9b7653;
-}
-
-/* PERSONAL INFORMATION PAGE */
-.personal-page {
-    flex-direction: column;
-    padding: 45px 8%;
-}
-
-/* GET TO KNOW ME HEADING ONLY */
-.about-heading {
-    margin-bottom: 35px;
-}
-
-.about-heading p {
-    color: #a17b58;
-    letter-spacing: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-/* INFORMATION LAYOUT */
-.about-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.about-left,
-.info-card {
-    background-color: #fffaf4;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.about-left h2,
-.info-card h2 {
-    color: #6f4e37;
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-/* PERSONAL DETAILS */
-.info-item {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    padding: 14px 0;
-    border-bottom: 1px solid #e7d9c9;
-    line-height: 1.5;
-}
-
-.info-item:last-child {
-    border-bottom: none;
-}
-
-.info-item strong {
-    color: #8b6243;
-    font-size: 15px;
-}
-
-.info-item span {
-    color: #4b3528;
-    font-size: 15px;
-}
-
-/* RIGHT COLUMN */
-.about-right {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.info-card p {
-    line-height: 1.8;
-    font-size: 15px;
-}
-
-.motto {
-    font-style: italic;
-    color: #8b6243;
-}
-
-/* RESPONSIVE DESIGN */
-@media screen and (max-width: 768px) {
-
-    .home-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .home-image img {
-        width: 220px;
-        height: 270px;
-    }
-
-    .home-text h1 {
-        font-size: 32px;
-    }
-
-    .about-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .personal-page {
-        padding: 35px 5%;
-    }
-
-    nav {
-        gap: 8px;
-    }
-
-    .nav-btn {
-        font-size: 12px;
-        padding: 10px;
-    }
-}
+</body>
+</html>
