@@ -1,170 +1,240 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <title>Glaiza Miel | Online Portfolio</title>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4eee5;
+    color: #4b3528;
+    min-height: 100vh;
+}
 
-    <link rel="stylesheet" href="style.css">
-</head>
+/* NAVIGATION */
+header {
+    background-color: #6f4e37;
+    padding: 20px;
+}
 
-<body>
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-    <header>
-        <nav>
-            <button class="nav-btn active"
-                onclick="showPage('home', this)">
-                HOME
-            </button>
+.nav-btn {
+    border: 1px solid #fff;
+    background: transparent;
+    color: white;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
 
-            <button class="nav-btn"
-                onclick="showPage('personal', this)">
-                PERSONAL INFORMATION
-            </button>
-        </nav>
-    </header>
+.nav-btn:hover,
+.nav-btn.active {
+    background-color: #d6b99b;
+    color: #4b3528;
+}
 
-    <main>
+/* PAGE DISPLAY */
+.page {
+    display: none;
+    min-height: calc(100vh - 70px);
+}
 
-        <!-- HOME PAGE -->
-        <section id="home" class="page active">
+.page.active {
+    display: block;
+}
 
-            <div class="home-content">
+/* HOME PAGE */
+#home {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 8%;
+}
 
-                <div class="home-image">
-                    <img src="photo.jpg"
-                         alt="Glaiza Miel's Photo">
-                </div>
+#home.active {
+    display: flex;
+}
 
-                <div class="home-text">
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1100px;
+    width: 100%;
+}
 
-                    <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+.home-image img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border: 8px solid #fffaf4;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
 
-                    <h1>Glaiza Miel G. Manipon</h1>
+.home-text {
+    max-width: 550px;
+}
 
-                    <h2>Future Writer</h2>
+.welcome {
+    color: #9b7653;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
-                    <p>
-                        Welcome to my online portfolio!
-                        This website shares my personal information,
-                        experiences, achievements, and goals in life.
-                        It represents my journey as a student and
-                        my continuous growth as a person.
-                    </p>
+.home-text h1 {
+    font-size: 42px;
+    color: #6f4e37;
+    margin-bottom: 10px;
+}
 
-                    <button class="learn-btn"
-                        onclick="showPage('personal',
-                        document.querySelectorAll('.nav-btn')[1])">
-                        LEARN MORE
-                    </button>
+.home-text h2 {
+    font-size: 21px;
+    color: #a17b58;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
 
-                </div>
+.home-text p {
+    line-height: 1.8;
+    font-size: 16px;
+}
 
-            </div>
+.learn-btn {
+    margin-top: 25px;
+    padding: 13px 25px;
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        </section>
+.learn-btn:hover {
+    background-color: #9b7653;
+}
 
+/* PERSONAL INFORMATION */
+.personal-page {
+    padding: 45px 8%;
+}
 
-        <!-- PERSONAL INFORMATION PAGE -->
-        <section id="personal" class="page personal-page">
+/* INFORMATION LAYOUT */
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
 
-            <div class="about-heading">
-                <p>GET TO KNOW ME</p>
-                <h1>PERSONAL INFORMATION</h1>
-            </div>
+.about-left,
+.info-card {
+    background-color: #fffaf4;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
-            <div class="about-layout">
+.about-left h2,
+.info-card h2 {
+    color: #6f4e37;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
 
-                <!-- LEFT COLUMN -->
-                <div class="about-left">
+/* PERSONAL DETAILS */
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e7d9c9;
+    line-height: 1.5;
+}
 
-                    <h2>Personal Details</h2>
+.info-item:last-child {
+    border-bottom: none;
+}
 
-                    <div class="info-item">
-                        <strong>Full Name</strong>
-                        <span>Glaiza Miel G. Manipon</span>
-                    </div>
+.info-item strong {
+    color: #8b6243;
+    font-size: 15px;
+}
 
-                    <div class="info-item">
-                        <strong>Birthday</strong>
-                        <span>May 15, 2008</span>
-                    </div>
+.info-item span {
+    color: #4b3528;
+    font-size: 15px;
+}
 
-                    <div class="info-item">
-                        <strong>Address</strong>
-                        <span>Skyview, Virac, Itogon, Benguet</span>
-                    </div>
+/* RIGHT COLUMN */
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 
-                    <div class="info-item">
-                        <strong>Interests</strong>
-                        <span>Writing, Reading, and Sports</span>
-                    </div>
+.info-card p {
+    line-height: 1.8;
+    font-size: 15px;
+}
 
-                    <div class="info-item">
-                        <strong>Hobbies</strong>
-                        <span>Creating Articles and Learning New Things</span>
-                    </div>
+.motto {
+    font-style: italic;
+    color: #8b6243;
+}
 
-                </div>
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
 
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
 
-                <!-- RIGHT COLUMN -->
-                <div class="about-right">
+    .home-image img {
+        width: 220px;
+        height: 270px;
+    }
 
-                    <div class="info-card">
+    .home-text h1 {
+        font-size: 32px;
+    }
 
-                        <h2>My Goals in Life</h2>
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
 
-                        <p>
-                            My goal is to finish my studies, improve
-                            my skills, and become successful in my
-                            chosen career. I want to make my family
-                            proud and use my knowledge to help others.
-                        </p>
+    .personal-page {
+        padding: 35px 5%;
+    }
 
-                    </div>
+    nav {
+        gap: 8px;
+    }
 
-                    <div class="info-card">
-
-                        <h2>My Motto</h2>
-
-                        <p class="motto">
-                            "With faith, patience, and hard work,
-                            I will turn my dreams into reality."
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <script>
-
-        function showPage(pageId, button) {
-
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-
-            document.getElementById(pageId).classList.add('active');
-
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            button.classList.add('active');
-
-        }
-
-    </script>
-
-</body>
-</html>
+    .nav-btn {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
