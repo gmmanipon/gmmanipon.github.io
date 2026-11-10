@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +7,8 @@
 <title>Glaiza Miel | Personal Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- HEADER -->
 <header>
     <nav>
         <button class="active" onclick="showPage(0)">Home</button>
@@ -18,180 +17,125 @@
 </header>
 
 <main>
-
-    <!-- PAGE 1: HOME -->
+    <!-- HOME PAGE -->
     <section class="page active">
-
         <div class="home-content">
-
             <div class="home-text">
                 <h3>HELLO! WELCOME</h3>
-
                 <h1>I'm Glaiza Miel G. Manipon</h1>
-
                 <p>
-                    A Bachelor of Science in Information Technology
-                    student who is passionate about learning,
-                    exploring technology, and improving my skills.
-                    I also enjoy writing articles, especially sports
-                    articles, where I can share stories and highlight
-                    the achievements of athletes.
+                    A Bachelor of Science in Information Technology student
+                    who is passionate about learning, exploring technology,
+                    and improving my skills. I also enjoy writing articles,
+                    especially sports articles, where I can share stories
+                    and highlight the achievements of athletes.
                 </p>
-
                 <p class="tagline">
                     Student | Future IT Professional | Future Writer
                 </p>
             </div>
 
-            <!-- PERSONAL PHOTO -->
             <div class="photo-container">
-
-                <img id="profilePhoto"
-                     class="home-photo"
+                <img id="profilePhoto" class="home-photo"
                      alt="Glaiza Miel's Photo">
-
                 <div id="photoPlaceholder" class="photo-placeholder">
-                    <span style="font-size:40px;">📷</span>
+                    <span class="camera-icon">📷</span>
                     <p>Your photo will appear here.</p>
                 </div>
-
             </div>
-
         </div>
 
         <div class="bottom-navigation">
             <button onclick="showPage(1)">Next →</button>
         </div>
-
     </section>
 
+    <!-- PERSONAL BACKGROUND PAGE -->
+    <section class="page personal-page">
 
-    <!-- PAGE 2: PERSONAL BACKGROUND -->
-    <section class="page">
-
-        <div class="section-heading">
-            <h1>Personal Background</h1>
-            <p>Get to know me, my education, interests, and dreams.</p>
+        <div class="about-heading">
+            <span class="eyebrow">GET TO KNOW ME</span>
+            <h1>About Me</h1>
+            <p>
+                A little introduction to who I am, what I value,
+                and the future I am working toward.
+            </p>
         </div>
 
-        <div class="cards">
+        <div class="about-layout">
 
-            <!-- PERSONAL INFORMATION -->
-            <div class="card about-card">
+            <!-- LEFT COLUMN -->
+            <div class="about-left">
+                <h2>Personal Information</h2>
 
-                <div class="emoji">🌷</div>
-                <h3>Personal Information</h3>
+                <p class="introduction">
+                    Hi! I'm Glaiza Miel G. Manipon, a student who enjoys
+                    learning new things, exploring technology, and discovering
+                    different ways to improve my skills. I also love writing,
+                    especially sports articles, because it allows me to share
+                    stories and recognize the achievements of others.
+                </p>
 
-                <hr>
+                <div class="information-list">
 
-                <div class="personal-info">
+                    <div class="info-row">
+                        <strong>Full Name</strong>
+                        <span>Glaiza Miel G. Manipon</span>
+                    </div>
 
-                    <p>
-                        <strong>Full Name:</strong><br>
-                        Glaiza Miel G. Manipon
-                    </p>
+                    <div class="info-row">
+                        <strong>Birthday</strong>
+                        <span>May 15, 2008</span>
+                    </div>
 
-                    <p>
-                        <strong>Birthday:</strong><br>
-                        May 15, 2008
-                    </p>
+                    <div class="info-row">
+                        <strong>Location</strong>
+                        <span>Skyview, Virac, Itogon, Benguet</span>
+                    </div>
 
-                    <p>
-                        <strong>Phone:</strong><br>
-                        09564624448
-                    </p>
+                    <div class="info-row">
+                        <strong>Hobbies</strong>
+                        <span>Writing articles, reading, learning, and exploring new things</span>
+                    </div>
 
-                    <p>
-                        <strong>Email:</strong><br>
-                        maniponglaiza41@gmail.com
-                    </p>
-
-                    <p>
-                        <strong>Address:</strong><br>
-                        Skyview, Virac, Itogon, Benguet
-                    </p>
+                    <div class="info-row">
+                        <strong>Interests</strong>
+                        <span>Technology, computers, sports writing, and creativity</span>
+                    </div>
 
                 </div>
-
             </div>
 
+            <!-- RIGHT COLUMN -->
+            <div class="about-right">
 
-            <!-- EDUCATION -->
-            <div class="card">
+                <section class="goals-section">
+                    <h2>My Goals in Life</h2>
 
-                <div class="emoji">🎓</div>
-                <h3>Education</h3>
+                    <p>
+                        I want to finish my education and build a meaningful
+                        career in the IT industry. I hope to use my knowledge
+                        and creativity to make useful things, continue improving
+                        my skills, and become more confident in what I do.
+                        I know that growth takes time, so I will keep learning,
+                        working hard, and trusting God's plan for my future.
+                    </p>
+                </section>
 
-                <p>
-                    I completed my elementary education at
-                    Balatoc Elementary School. I continued my
-                    junior and senior high school education at
-                    Saint Louis High School of Balatoc, Inc.,
-                    where I took the STEM strand during senior
-                    high school.
-                </p>
+                <section class="motto-section">
+                    <h2>My Motto</h2>
 
-                <p>
-                    I am proud to have received honors since
-                    elementary school because these achievements
-                    remind me of the importance of hard work
-                    and perseverance.
-                </p>
+                    <blockquote>
+                        “With faith, patience, and hard work, I will turn my dreams into reality.”
+                    </blockquote>
 
-                <p>
-                    I am currently pursuing a Bachelor of Science
-                    in Information Technology (BSIT) in college.
-                </p>
-
-            </div>
-
-
-            <!-- HOBBIES AND INTERESTS -->
-            <div class="card">
-
-                <div class="emoji">✍️</div>
-                <h3>Hobbies and Interests</h3>
-
-                <p>
-                    I enjoy learning new things and exploring
-                    my interests. I am especially interested
-                    in writing articles, particularly sports
-                    articles.
-                </p>
-
-                <p>
-                    I like how sports writing shares athletes'
-                    stories, highlights their achievements,
-                    and informs readers about important events.
-                    I also enjoy activities that help me improve
-                    my creativity and communication skills.
-                </p>
+                    <p>
+                        I will keep learning, stay determined, and trust every
+                        step of the journey that leads me closer to my goals.
+                    </p>
+                </section>
 
             </div>
-
-
-            <!-- MY GOALS -->
-            <div class="card">
-
-                <div class="emoji">✨</div>
-                <h3>My Goals</h3>
-
-                <p>
-                    One of my goals is to finish my education
-                    and build a successful future. I want to
-                    improve my knowledge and skills, especially
-                    in technology and writing.
-                </p>
-
-                <p>
-                    I know that reaching my dreams requires
-                    patience, dedication, and faith. I will
-                    continue working hard, trusting God's plan,
-                    and learning from every challenge I face.
-                </p>
-
-            </div>
-
         </div>
 
         <div class="bottom-navigation">
@@ -199,14 +143,10 @@
         </div>
 
     </section>
-
 </main>
 
 <script>
-
-/* SWITCH BETWEEN PAGES */
 function showPage(index) {
-
     const pages = document.querySelectorAll(".page");
     const buttons = document.querySelectorAll("nav button");
 
@@ -217,7 +157,6 @@ function showPage(index) {
     buttons.forEach((button, i) => {
         button.classList.toggle("active", i === index);
     });
-
 }
 
 /* AUTOMATIC PHOTO DETECTION */
@@ -231,7 +170,6 @@ const possiblePhotos = [
 ];
 
 function loadProfilePhoto(index = 0) {
-
     const photo = document.getElementById("profilePhoto");
     const placeholder = document.getElementById("photoPlaceholder");
 
@@ -256,7 +194,6 @@ function loadProfilePhoto(index = 0) {
 }
 
 loadProfilePhoto();
-
 </script>
 
 </body>
