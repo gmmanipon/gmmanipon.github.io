@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +38,7 @@ nav button {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.2s ease;
 }
 
 nav button:hover,
@@ -131,6 +133,10 @@ main {
     line-height: 1.6;
 }
 
+.camera-icon {
+    font-size: 40px;
+}
+
 /* BOTTOM NAVIGATION */
 .bottom-navigation {
     display: flex;
@@ -153,87 +159,128 @@ main {
     background: #4b3628;
 }
 
-/* PERSONAL BACKGROUND */
-.section-heading {
-    text-align: center;
-    margin: 10px 0 20px;
+/* ABOUT ME PAGE */
+.personal-page {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.section-heading h1 {
+.about-heading {
+    margin: 12px 0 34px;
+    padding-left: 6%;
+}
+
+.eyebrow {
+    display: block;
+    color: #9a7656;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.about-heading h1 {
     color: #6f4e37;
-    font-size: 35px;
-    margin-bottom: 8px;
+    font-size: 46px;
+    margin-bottom: 12px;
 }
 
-.section-heading p {
+.about-heading p {
     color: #806b58;
+    font-size: 17px;
+    line-height: 1.5;
 }
 
-/* CARDS */
-.cards {
+/* TWO-COLUMN LAYOUT */
+.about-layout {
     flex: 1;
     min-height: 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-    gap: 15px;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 6%;
+    padding: 0 2%;
 }
 
-.card {
-    background: #fffaf4;
-    border: 1px solid #dfcbb5;
-    border-radius: 12px;
-    padding: 18px;
-    text-align: center;
+.about-left {
+    padding-right: 7%;
+    border-right: 1px solid #cbb69e;
+}
+
+.about-layout h2 {
+    color: #6f4e37;
+    font-size: 27px;
+    margin-bottom: 17px;
+}
+
+.introduction,
+.goals-section p,
+.motto-section p {
+    color: #5c4939;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.introduction {
+    margin-bottom: 22px;
+}
+
+/* PERSONAL INFORMATION */
+.information-list {
+    border-top: 1px solid #d8c5ae;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 135px 1fr;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid #d8c5ae;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.info-row strong {
+    color: #6f4e37;
+}
+
+.info-row span {
+    color: #4b3628;
+}
+
+/* RIGHT COLUMN */
+.about-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 0 5px 15px #6f4e3715;
+    justify-content: space-between;
+    padding: 0 2% 0 0;
 }
 
-.card .emoji {
-    font-size: 28px;
-    margin-bottom: 8px;
+.goals-section {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #d8c5ae;
 }
 
-.card h3 {
-    color: #6f4e37;
-    font-size: 18px;
-    margin-bottom: 9px;
+.goals-section p {
+    max-width: 550px;
 }
 
-.card p {
-    color: #5c4939;
-    font-size: 13px;
-    line-height: 1.5;
-    margin-bottom: 7px;
+/* MY MOTTO */
+.motto-section {
+    padding-top: 28px;
 }
 
-.card hr {
-    border: none;
-    border-top: 1px solid #dfcbb5;
-    margin: 8px 0;
+.motto-section blockquote {
+    color: #806044;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.45;
+    margin: 15px 0 18px;
 }
 
-/* PERSONAL INFORMATION ALIGNMENT */
-.about-card {
-    align-items: center;
-}
-
-.about-card .personal-info {
-    width: 100%;
-    max-width: 300px;
-    text-align: left;
-}
-
-.about-card .personal-info p {
-    margin-bottom: 10px;
-    line-height: 1.4;
-}
-
-.about-card .personal-info strong {
-    color: #6f4e37;
+.motto-section p {
+    font-size: 15px;
 }
 
 /* MOBILE VIEW */
@@ -297,16 +344,42 @@ main {
         height: 300px;
     }
 
-    .cards {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+    .personal-page {
+        min-height: 1000px;
     }
 
-    .card {
-        min-height: 190px;
+    .about-heading {
+        padding-left: 0;
+        margin-bottom: 25px;
     }
 
-    .about-card {
-        min-height: 300px;
+    .about-heading h1 {
+        font-size: 36px;
+    }
+
+    .about-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-left {
+        padding-right: 0;
+        padding-bottom: 25px;
+        border-right: none;
+        border-bottom: 1px solid #cbb69e;
+    }
+
+    .about-layout h2 {
+        font-size: 23px;
+    }
+
+    .info-row {
+        grid-template-columns: 110px 1fr;
+        font-size: 14px;
+    }
+
+    .motto-section blockquote {
+        font-size: 25px;
     }
 }
