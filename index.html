@@ -7,255 +7,333 @@
     <title>Glaiza Miel | Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- HEADER / NAVIGATION BAR -->
-    <header>
-        <nav>
-            <button class="active" onclick="showPage(0)">Home</button>
-            <button onclick="showPage(1)">Personal Background</button>
+    <!-- NAVIGATION BAR -->
+    <header class="site-header">
+        <a class="brand" href="#" onclick="showPage('home'); return false;">
+            GLAIZA MIEL.
+        </a>
+
+        <nav aria-label="Main navigation">
+            <button class="nav-button active" data-page="home" onclick="showPage('home')">Home</button>
+            <button class="nav-button" data-page="personal" onclick="showPage('personal')">Personal Information</button>
+            <button class="nav-button" data-page="education" onclick="showPage('education')">Education</button>
+            <button class="nav-button" data-page="achievements" onclick="showPage('achievements')">Achievements</button>
+            <button class="nav-button" data-page="parents" onclick="showPage('parents')">Parents</button>
+            <button class="nav-button" data-page="surprise" onclick="showPage('surprise')">Surprise</button>
         </nav>
     </header>
 
-    <main>
+    <main class="page-stage">
 
-        <!-- PAGE 1: HOME -->
-        <section class="page active">
-
-            <div class="home-content">
+        <!-- HOME -->
+        <section class="page active" id="home">
+            <div class="home-layout">
 
                 <div class="home-text">
-                    <h3>HELLO! WELCOME</h3>
+                    <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
 
-                    <h1>I'm Glaiza Miel G. Manipon</h1>
+                    <h1>
+                        Hello, I'm
+                        <span>Glaiza Miel G. Manipon</span>
+                    </h1>
 
-                    <p>
+                    <p class="intro">
                         A Bachelor of Science in Information Technology
-                        student who is passionate about learning,
-                        exploring technology, and improving my skills.
-                        I also enjoy writing articles, especially sports
-                        articles, where I can share stories and highlight
-                        the achievements of athletes.
+                        student who enjoys learning, exploring technology,
+                        and improving my skills. I also love writing articles,
+                        especially sports articles, where I can share stories
+                        and highlight the achievements of athletes.
                     </p>
 
                     <p class="tagline">
                         Student | Future IT Professional | Future Writer
                     </p>
+
+                    <button class="primary-button"
+                        onclick="showPage('personal')">
+                        Get to know me →
+                    </button>
                 </div>
 
-                <!-- PERSONAL PHOTO -->
-                <div class="photo-container">
-
+                <div class="photo-frame">
                     <img id="profilePhoto"
-                         class="home-photo"
-                         alt="Glaiza Miel's Photo">
+                         src="photo.jpg"
+                         alt="Glaiza Miel's portrait">
 
                     <div id="photoPlaceholder" class="photo-placeholder">
-                        <span style="font-size:40px;">📷</span>
-                        <p>Your photo will appear here.</p>
+                        <span>📷</span>
+                        <p>Add your picture and name it <strong>photo.jpg</strong>.</p>
                     </div>
-
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- PAGE 2: PERSONAL BACKGROUND -->
-        <section class="page">
+        <!-- PERSONAL INFORMATION -->
+        <section class="page" id="personal">
 
-            <div class="section-heading">
+            <div class="page-heading">
+                <p class="eyebrow">GET TO KNOW ME</p>
                 <h1>Personal Information</h1>
-                <p>Get to know me, my education, interests, and dreams.</p>
+                <p>A little introduction to who I am, what I value, and what I enjoy.</p>
             </div>
 
-            <div class="cards">
+            <div class="two-column">
 
-                <!-- PERSONAL INFORMATION -->
-                <div class="card about-card">
+                <article class="content-column">
+                    <h2>About Me</h2>
 
-                    <div class="emoji">🌷</div>
-                    <h3>Personal Information</h3>
+                    <p>
+                        Hi! I'm Glaiza Miel G. Manipon, a student who enjoys
+                        learning new things, exploring technology, and
+                        discovering different ways to improve my skills.
+                        I also enjoy writing, especially sports articles.
+                        I believe every experience gives me a chance to
+                        learn something valuable.
+                    </p>
 
-                    <hr>
+                    <div class="info-list">
 
-                    <div class="personal-info">
+                        <div class="info-row">
+                            <strong>Full Name</strong>
+                            <span>Glaiza Miel G. Manipon</span>
+                        </div>
 
-                        <p>
-                            <strong>Full Name:</strong><br>
-                            Glaiza Miel G. Manipon
-                        </p>
+                        <div class="info-row">
+                            <strong>Birthday</strong>
+                            <span>May 15, 2008</span>
+                        </div>
 
-                        <p>
-                            <strong>Birthday:</strong><br>
-                            May 15, 2008
-                        </p>
+                        <div class="info-row">
+                            <strong>Hobbies</strong>
+                            <span>Writing articles, exploring technology, and learning new things</span>
+                        </div>
 
-                        <p>
-                            <strong>Phone:</strong><br>
-                            09564624448
-                        </p>
-
-                        <p>
-                            <strong>Email:</strong><br>
-                            maniponglaiza41@gmail.com
-                        </p>
-
-                        <p>
-                            <strong>Address:</strong><br>
-                            Skyview, Virac, Itogon, Benguet
-                        </p>
+                        <div class="info-row">
+                            <strong>Interests</strong>
+                            <span>Information technology, sports writing, and creativity</span>
+                        </div>
 
                     </div>
+                </article>
 
-                </div>
 
+                <article class="content-column right-column">
 
-                <!-- EDUCATION -->
-                <div class="card">
-
-                    <div class="emoji">🎓</div>
-                    <h3>Education</h3>
+                    <h2>My Goals in Life</h2>
 
                     <p>
-                        I completed my elementary education at
-                        Balatoc Elementary School. I continued my
-                        junior and senior high school education at
-                        Saint Louis High School of Balatoc, Inc.,
-                        where I took the STEM strand during senior
-                        high school.
+                        One of my goals is to finish my education and build
+                        a meaningful future in the IT industry. I want to
+                        improve my knowledge and creativity, gain experience,
+                        and develop skills that will open opportunities for
+                        my future. I know growth takes time, and I am willing
+                        to keep learning and working toward the life I want.
                     </p>
 
-                    <p>
-                        I am proud to have received honors since
-                        elementary school because these achievements
-                        remind me of the importance of hard work
-                        and perseverance.
-                    </p>
+                    <div class="motto">
+                        <h2>My Motto</h2>
 
-                    <p>
-                        I am currently pursuing a Bachelor of Science
-                        in Information Technology (BSIT) in college.
-                    </p>
+                        <blockquote>
+                            “Small steps today can lead to a future I once only imagined.”
+                        </blockquote>
 
-                </div>
+                        <p>
+                            I will keep learning, stay curious, and trust
+                            the progress I make along the way.
+                        </p>
+                    </div>
 
-
-                <!-- HOBBIES AND INTERESTS -->
-                <div class="card">
-
-                    <div class="emoji">✍️</div>
-                    <h3>Hobbies and Interests</h3>
-
-                    <p>
-                        I enjoy learning new things and exploring
-                        my interests. I am especially interested
-                        in writing articles, particularly sports
-                        articles.
-                    </p>
-
-                    <p>
-                        I like how sports writing shares athletes'
-                        stories, highlights their achievements,
-                        and informs readers about important events.
-                        I also enjoy activities that help me improve
-                        my creativity and communication skills.
-                    </p>
-
-                </div>
-
-
-                <!-- MY GOALS -->
-                <div class="card">
-
-                    <div class="emoji">✨</div>
-                    <h3>My Goals</h3>
-
-                    <p>
-                        One of my goals is to finish my education
-                        and build a successful future. I want to
-                        improve my knowledge and skills, especially
-                        in technology and writing.
-                    </p>
-
-                    <p>
-                        I know that reaching my dreams requires
-                        patience, dedication, and faith. I will
-                        continue working hard, trusting God's plan,
-                        and learning from every challenge I face.
-                    </p>
-
-                </div>
+                </article>
 
             </div>
+        </section>
 
+
+        <!-- EDUCATION -->
+        <section class="page" id="education">
+
+            <div class="page-heading">
+                <p class="eyebrow">MY LEARNING JOURNEY</p>
+                <h1>Education</h1>
+                <p>Every step in my education has helped me grow.</p>
+            </div>
+
+            <div class="timeline-grid">
+
+                <article class="detail-card">
+                    <span class="card-icon">📚</span>
+                    <p class="card-kicker">ELEMENTARY</p>
+                    <h2>Balatoc Elementary School</h2>
+                    <p>
+                        I completed my elementary education here
+                        and began building the foundation of my learning.
+                    </p>
+                </article>
+
+                <article class="detail-card">
+                    <span class="card-icon">🎓</span>
+                    <p class="card-kicker">JUNIOR & SENIOR HIGH SCHOOL</p>
+                    <h2>Saint Louis High School of Balatoc, Inc.</h2>
+                    <p>
+                        I continued my studies here and took
+                        the STEM strand during senior high school.
+                    </p>
+                </article>
+
+                <article class="detail-card">
+                    <span class="card-icon">💻</span>
+                    <p class="card-kicker">COLLEGE</p>
+                    <h2>Bachelor of Science in Information Technology</h2>
+                    <p>
+                        I am currently pursuing BSIT and continuing
+                        to develop my knowledge and skills in technology.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ACHIEVEMENTS -->
+        <section class="page" id="achievements">
+
+            <div class="page-heading">
+                <p class="eyebrow">MILESTONES AND PROGRESS</p>
+                <h1>Achievements</h1>
+                <p>Small and big accomplishments that remind me to keep doing my best.</p>
+            </div>
+
+            <div class="achievement-layout">
+
+                <div class="achievement-symbol">🏅</div>
+
+                <article class="achievement-content">
+                    <h2>Academic Recognition</h2>
+
+                    <p>
+                        I am proud to have received honors since elementary
+                        school. These recognitions remind me that patience,
+                        effort, and consistency are important in reaching
+                        my goals.
+                    </p>
+
+                    <div class="achievement-note">
+                        <strong>What I learned:</strong>
+                        <span>
+                            Every achievement is a reminder to stay humble,
+                            keep learning, and continue improving.
+                        </span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- PARENTS -->
+        <section class="page" id="parents">
+
+            <div class="page-heading">
+                <p class="eyebrow">MY FAMILY</p>
+                <h1>My Parents</h1>
+                <p>The people whose love, guidance, and support mean a lot to me.</p>
+            </div>
+
+            <div class="family-panel">
+
+                <div class="family-icon">🏡</div>
+
+                <h2>My Greatest Support</h2>
+
+                <p>
+                    My parents are an important part of my life.
+                    Their guidance and support inspire me to keep studying,
+                    work toward my dreams, and become a better person.
+                    I am grateful for the lessons they teach me and
+                    the encouragement they give me.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- SURPRISE -->
+        <section class="page" id="surprise">
+
+            <div class="surprise-panel">
+
+                <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+
+                <div class="surprise-icon">🌷</div>
+
+                <h1>Thank You for Visiting!</h1>
+
+                <p>
+                    This portfolio is a small reflection of my journey,
+                    interests, and dreams. There is always more to learn,
+                    more to discover, and more room to grow.
+                </p>
+
+                <p class="surprise-message">
+                    Keep believing in your own progress!
+                </p>
+
+                <button class="primary-button"
+                    onclick="showPage('home')">
+                    Back to Home →
+                </button>
+
+            </div>
         </section>
 
     </main>
 
 
-    <!-- JAVASCRIPT: PAGE NAVIGATION -->
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        © 2026 Glaiza Miel G. Manipon | Personal Portfolio
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
     <script>
 
-        function showPage(index) {
+        function showPage(pageId) {
 
             const pages = document.querySelectorAll(".page");
-            const buttons = document.querySelectorAll("nav button");
+            const buttons = document.querySelectorAll(".nav-button");
 
-            pages.forEach((page, i) => {
-                page.classList.toggle("active", i === index);
+            pages.forEach((page) => {
+                page.classList.toggle("active", page.id === pageId);
             });
 
-            buttons.forEach((button, i) => {
-                button.classList.toggle("active", i === index);
+            buttons.forEach((button) => {
+                button.classList.toggle(
+                    "active",
+                    button.dataset.page === pageId
+                );
             });
 
         }
 
 
-        /* AUTOMATIC PHOTO DETECTION */
+        // PROFILE PHOTO
+        const profilePhoto = document.getElementById("profilePhoto");
+        const photoPlaceholder = document.getElementById("photoPlaceholder");
 
-        const possiblePhotos = [
-            "photo.jpg",
-            "photo.jpeg",
-            "photo.png",
-            "photo.webp",
-            "photo.JPG",
-            "photo.PNG"
-        ];
+        profilePhoto.addEventListener("load", () => {
+            profilePhoto.style.display = "block";
+            photoPlaceholder.style.display = "none";
+        });
 
-        function loadProfilePhoto(index = 0) {
-
-            const photo = document.getElementById("profilePhoto");
-            const placeholder = document.getElementById("photoPlaceholder");
-
-            if (index >= possiblePhotos.length) {
-
-                photo.style.display = "none";
-                placeholder.style.display = "block";
-
-                placeholder.innerHTML =
-                    "📷<br>Photo not found.<br>Check your photo filename and folder.";
-
-                return;
-            }
-
-            photo.onerror = function() {
-                loadProfilePhoto(index + 1);
-            };
-
-            photo.onload = function() {
-                photo.style.display = "block";
-                placeholder.style.display = "none";
-            };
-
-            photo.src = possiblePhotos[index];
-
-        }
-
-        loadProfilePhoto();
+        profilePhoto.addEventListener("error", () => {
+            profilePhoto.style.display = "none";
+            photoPlaceholder.style.display = "flex";
+        });
 
     </script>
 
