@@ -2,27 +2,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glaiza Miel | Personal Portfolio</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glaiza Miel | Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
     <nav>
         <button class="active" onclick="showPage(0)">Home</button>
-        <button onclick="showPage(1)">Personal Background</button>
+        <button onclick="showPage(1)">Personal Information</button>
     </nav>
 </header>
 
 <main>
+
     <!-- HOME PAGE -->
     <section class="page active">
+
         <div class="home-content">
+
             <div class="home-text">
                 <h3>HELLO! WELCOME</h3>
+
                 <h1>I'm Glaiza Miel G. Manipon</h1>
+
                 <p>
                     A Bachelor of Science in Information Technology student
                     who is passionate about learning, exploring technology,
@@ -30,32 +36,43 @@
                     especially sports articles, where I can share stories
                     and highlight the achievements of athletes.
                 </p>
+
                 <p class="tagline">
                     Student | Future IT Professional | Future Writer
                 </p>
             </div>
 
+            <!-- PERSONAL PHOTO -->
             <div class="photo-container">
-                <img id="profilePhoto" class="home-photo"
+
+                <img id="profilePhoto"
+                     class="home-photo"
                      alt="Glaiza Miel's Photo">
+
                 <div id="photoPlaceholder" class="photo-placeholder">
                     <span class="camera-icon">📷</span>
                     <p>Your photo will appear here.</p>
                 </div>
+
             </div>
+
         </div>
 
         <div class="bottom-navigation">
             <button onclick="showPage(1)">Next →</button>
         </div>
+
     </section>
+
 
     <!-- PERSONAL INFORMATION PAGE -->
     <section class="page personal-page">
 
         <div class="about-heading">
             <span class="eyebrow">GET TO KNOW ME</span>
+
             <h1>About Me</h1>
+
             <p>
                 A little introduction to who I am, what I value,
                 and the future I am working toward.
@@ -66,6 +83,7 @@
 
             <!-- LEFT COLUMN -->
             <div class="about-left">
+
                 <h2>Personal Information</h2>
 
                 <p class="introduction">
@@ -104,12 +122,15 @@
                     </div>
 
                 </div>
+
             </div>
+
 
             <!-- RIGHT COLUMN -->
             <div class="about-right">
 
                 <section class="goals-section">
+
                     <h2>My Goals in Life</h2>
 
                     <p>
@@ -120,9 +141,12 @@
                         I know that growth takes time, so I will keep learning,
                         working hard, and trusting God's plan for my future.
                     </p>
+
                 </section>
 
+
                 <section class="motto-section">
+
                     <h2>My Motto</h2>
 
                     <blockquote>
@@ -133,9 +157,11 @@
                         I will keep learning, stay determined, and trust every
                         step of the journey that leads me closer to my goals.
                     </p>
+
                 </section>
 
             </div>
+
         </div>
 
         <div class="bottom-navigation">
@@ -143,10 +169,15 @@
         </div>
 
     </section>
+
 </main>
 
+
 <script>
+
+/* SWITCH BETWEEN PAGES */
 function showPage(index) {
+
     const pages = document.querySelectorAll(".page");
     const buttons = document.querySelectorAll("nav button");
 
@@ -157,7 +188,9 @@ function showPage(index) {
     buttons.forEach((button, i) => {
         button.classList.toggle("active", i === index);
     });
+
 }
+
 
 /* AUTOMATIC PHOTO DETECTION */
 const possiblePhotos = [
@@ -170,14 +203,17 @@ const possiblePhotos = [
 ];
 
 function loadProfilePhoto(index = 0) {
+
     const photo = document.getElementById("profilePhoto");
     const placeholder = document.getElementById("photoPlaceholder");
 
     if (index >= possiblePhotos.length) {
         photo.style.display = "none";
         placeholder.style.display = "block";
+
         placeholder.innerHTML =
             "📷<br>Photo not found.<br>Check your photo filename and folder.";
+
         return;
     }
 
@@ -194,6 +230,7 @@ function loadProfilePhoto(index = 0) {
 }
 
 loadProfilePhoto();
+
 </script>
 
 </body>
