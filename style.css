@@ -159,13 +159,14 @@ main {
     background: #4b3628;
 }
 
-/* ABOUT ME PAGE */
+/* PERSONAL INFORMATION PAGE */
 .personal-page {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
 
+/* PAGE HEADING */
 .about-heading {
     margin: 12px 0 34px;
     padding-left: 6%;
@@ -202,6 +203,7 @@ main {
     padding: 0 2%;
 }
 
+/* LEFT COLUMN */
 .about-left {
     padding-right: 7%;
     border-right: 1px solid #cbb69e;
@@ -225,7 +227,7 @@ main {
     margin-bottom: 22px;
 }
 
-/* PERSONAL INFORMATION */
+/* PERSONAL INFORMATION DETAILS */
 .information-list {
     border-top: 1px solid #d8c5ae;
 }
@@ -256,6 +258,7 @@ main {
     padding: 0 2% 0 0;
 }
 
+/* MY GOALS */
 .goals-section {
     padding-bottom: 30px;
     border-bottom: 1px solid #d8c5ae;
@@ -316,6 +319,7 @@ main {
         min-height: 700px;
     }
 
+    /* HOME */
     .home-content {
         flex-direction: column-reverse;
         text-align: center;
@@ -344,6 +348,7 @@ main {
         height: 300px;
     }
 
+    /* PERSONAL INFORMATION */
     .personal-page {
         min-height: 1000px;
     }
