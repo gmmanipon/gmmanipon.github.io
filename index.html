@@ -4,236 +4,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glaiza Miel | Personal Portfolio</title>
-
-    <!-- Connect the CSS file -->
+    <title>Glaiza Miel | Online Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-    <div class="logo">GLAIZA MIEL.</div>
-
     <nav>
-        <button class="active" onclick="showPage(0)">Home</button>
-        <button onclick="showPage(1)">About Me</button>
-        <button onclick="showPage(2)">Achievements</button>
+        <button class="nav-btn active" onclick="showPage('home', this)">
+            HOME
+        </button>
+
+        <button class="nav-btn" onclick="showPage('personal', this)">
+            PERSONAL INFORMATION
+        </button>
+
+        <button class="nav-btn" onclick="showPage('achievements', this)">
+            ACHIEVEMENTS
+        </button>
     </nav>
 </header>
 
-<!-- HOME PAGE -->
-<section class="page active" id="home">
-    <div class="home-content">
+<main>
 
-        <div class="home-text">
-            <div class="greeting">HELLO, WELCOME</div>
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
 
-            <h1>I'm Glaiza Miel G. Manipon</h1>
+        <div class="home-content">
 
-            <p>
-                A Bachelor of Science in Information Technology student
-                who is passionate about learning, exploring technology,
-                and improving my skills. I also enjoy writing articles,
-                especially sports articles, where I can share stories
-                and highlight the achievements of athletes.
-            </p>
-
-            <div class="tagline">
-                Student | Future IT Professional | Future Writer
+            <div class="home-image">
+                <img src="photo.jpg" alt="Glaiza Miel's Photo">
             </div>
+
+            <div class="home-text">
+                <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+                <h1>Glaiza Miel G. Manipon</h1>
+
+                <h2>Future Writer</h2>
+
+                <p>
+                    Welcome to my online portfolio! This website shares
+                    my personal information, experiences, achievements,
+                    and goals in life. It represents my journey as a
+                    student and my continuous growth as a person.
+                </p>
+
+                <button class="learn-btn"
+                    onclick="showPage('personal',
+                    document.querySelectorAll('.nav-btn')[1])">
+                    LEARN MORE
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PERSONAL INFORMATION -->
+    <section id="personal" class="page personal-page">
+
+        <div class="about-heading">
+            <p>GET TO KNOW ME</p>
         </div>
 
-        <img src="photo.jpg"
-             alt="Glaiza Miel's Photo"
-             class="home-photo">
+        <div class="about-layout">
 
-    </div>
-</section>
+            <div class="about-left">
+                <h2>Personal Details</h2>
 
-<!-- ABOUT ME PAGE -->
-<section class="page" id="about">
+                <div class="info-item">
+                    <strong>Full Name</strong>
+                    <span>Glaiza Miel G. Manipon</span>
+                </div>
 
-    <div class="section-heading">
-        <small>GET TO KNOW ME</small>
-        <h1>About Me</h1>
-        <p>A little introduction to who I am, what I value, and the future I am working toward.</p>
-    </div>
+                <div class="info-item">
+                    <strong>Birthday</strong>
+                    <span>May 15, 2008</span>
+                </div>
 
-    <div class="about-content">
+                <div class="info-item">
+                    <strong>Address</strong>
+                    <span>Skyview, Virac, Itogon, Benguet</span>
+                </div>
 
-        <div class="about-card">
-            <h2>Personal Information</h2>
+                <div class="info-item">
+                    <strong>Interests</strong>
+                    <span>Writing, Reading, and Sports</span>
+                </div>
 
-            <p>
-                I am Glaiza Miel G. Manipon, a student who continues
-                to learn, grow, and discover my abilities. I value
-                every experience because it helps me become a better
-                version of myself. I enjoy learning new things,
-                creating articles, and spending time on activities
-                that help me improve.
-            </p>
-
-            <div class="info-row">
-                <strong>Full Name</strong>
-                <span>Glaiza Miel G. Manipon</span>
+                <div class="info-item">
+                    <strong>Hobbies</strong>
+                    <span>Creating Articles and Learning New Things</span>
+                </div>
             </div>
 
-            <div class="info-row">
-                <strong>Course</strong>
-                <span>BS Information Technology</span>
-            </div>
+            <div class="about-right">
 
-            <div class="info-row">
-                <strong>Location</strong>
-                <span>Virac, Itogon, Benguet</span>
-            </div>
+                <div class="info-card">
+                    <h2>My Goals in Life</h2>
+                    <p>
+                        My goal is to finish my studies, improve my
+                        skills, and become successful in my chosen
+                        career. I want to make my family proud and
+                        use my knowledge to help others.
+                    </p>
+                </div>
 
-            <div class="info-row">
-                <strong>Hobbies</strong>
-                <span>Writing and exploring technology</span>
-            </div>
+                <div class="info-card">
+                    <h2>My Motto</h2>
+                    <p class="motto">
+                        "With faith, patience, and hard work,
+                        I will turn my dreams into reality."
+                    </p>
+                </div>
 
-            <div class="info-row">
-                <strong>Interests</strong>
-                <span>Sports articles and IT</span>
             </div>
         </div>
+    </section>
 
-        <div class="about-card">
-            <h2>My Goals in Life</h2>
 
-            <p>
-                One of my goals is to become a successful IT
-                professional who can use technology to create
-                meaningful solutions and help others. I also want
-                to continue developing my writing skills, especially
-                in sports journalism.
-            </p>
+    <!-- ACHIEVEMENTS PAGE -->
+    <section id="achievements" class="page personal-page">
 
-            <p>
-                I know that reaching my dreams will take time,
-                patience, and hard work. I will continue to learn
-                from my experiences, accept challenges, and trust
-                the path that God has prepared for me.
-            </p>
-
-            <h2>My Motto</h2>
-
-            <p class="motto">
-                "With faith, determination, and hard work,
-                anything is possible."
-            </p>
-
-            <p>
-                I will continue to trust God's plan, stay determined,
-                and give my best in everything I do.
-            </p>
+        <div class="about-heading">
+            <p>MY ACHIEVEMENTS</p>
         </div>
 
-    </div>
+        <div class="achievement-container">
 
-    <div class="page-navigation">
-        <button onclick="showPage(0)">← Home</button>
-        <button onclick="showPage(2)">Next →</button>
-    </div>
-
-</section>
-
-<!-- ACHIEVEMENTS PAGE -->
-<section class="page" id="achievements">
-
-    <div class="section-heading">
-        <small>MY JOURNEY AND PROGRESS</small>
-        <h1>My Achievements</h1>
-    </div>
-
-    <p class="achievement-intro">
-        Every achievement represents the hard work, dedication,
-        and experiences that helped me grow throughout my school years.
-    </p>
-
-    <div class="achievement-grid">
-
-        <div class="achievement-card">
-            <h2>Elementary</h2>
-
-            <div class="school-name">
-                Balatoc Elementary School
+            <div class="achievement-card">
+                <div class="achievement-icon">🏅</div>
+                <h2>Academic Honors</h2>
+                <p>
+                    I have received academic honors since elementary
+                    school. These recognitions remind me of the
+                    importance of dedication, patience, and hard work.
+                </p>
             </div>
 
-            <ul>
-                <li>Consistent Honor Student</li>
-            </ul>
-        </div>
-
-        <div class="achievement-card">
-            <h2>Junior High School</h2>
-
-            <div class="school-name">
-                Saint Louis High School of Balatoc, Inc.
+            <div class="achievement-card">
+                <div class="achievement-icon">🎓</div>
+                <h2>Elementary Graduate</h2>
+                <p>
+                    Successfully completed my elementary education
+                    at Balatoc Elementary School.
+                </p>
             </div>
 
-            <ul>
-                <li>Consistent Honor Student</li>
-                <li>Special Award in Maidens of the Altar</li>
-                <li>Sports Writer Award</li>
-            </ul>
-        </div>
-
-        <div class="achievement-card">
-            <h2>Senior High School</h2>
-
-            <div class="school-name">
-                Saint Louis High School of Balatoc, Inc.
+            <div class="achievement-card">
+                <div class="achievement-icon">📚</div>
+                <h2>Senior High School Graduate</h2>
+                <p>
+                    Completed my Senior High School education
+                    under the STEM strand at Saint Louis High School
+                    of Balatoc, Inc.
+                </p>
             </div>
 
-            <ul>
-                <li>Consistent With Honors</li>
-                <li>Best in Research Award</li>
-                <li>Sports Writer Award</li>
-                <li>Maidens of the Altar Award</li>
-            </ul>
+            <div class="achievement-card">
+                <div class="achievement-icon">🌟</div>
+                <h2>Personal Growth</h2>
+                <p>
+                    Every challenge, experience, and lesson has
+                    helped me become a better and more determined
+                    student.
+                </p>
+            </div>
+
         </div>
 
-    </div>
+    </section>
 
-    <p class="achievement-note">
-        These achievements remind me that every effort matters.
-        They inspire me to continue learning, improving, and doing
-        my best in every opportunity. I am grateful for the people
-        who guided and supported me along the way.
-    </p>
+</main>
 
-    <div class="page-navigation">
-        <button onclick="showPage(1)">← About Me</button>
-        <button onclick="showPage(0)">Back to Home</button>
-    </div>
 
-</section>
-
-<!-- FOOTER -->
-<footer>
-    © 2026 Glaiza Miel G. Manipon | IT Personal Portfolio
-</footer>
-
-<!-- JAVASCRIPT -->
 <script>
-function showPage(index) {
-    const pages = document.querySelectorAll(".page");
-    const buttons = document.querySelectorAll("nav button");
+function showPage(pageId, button) {
 
-    pages.forEach(page => {
-        page.classList.remove("active");
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
     });
 
-    buttons.forEach(button => {
-        button.classList.remove("active");
+    document.getElementById(pageId).classList.add('active');
+
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('active');
     });
 
-    pages[index].classList.add("active");
-    buttons[index].classList.add("active");
+    button.classList.add('active');
 }
 </script>
 
