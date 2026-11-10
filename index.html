@@ -4,316 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glaiza Miel | Personal Portfolio</title>
+    <title>My Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVIGATION BAR -->
-<header class="site-header">
-    <a href="#" class="brand" onclick="showPage('home'); return false;">
-        GLAIZA MIEL.
-    </a>
-
-    <nav>
-        <button class="nav-button active" data-page="home"
-            onclick="showPage('home')">Home</button>
-
-        <button class="nav-button" data-page="personal"
-            onclick="showPage('personal')">Personal Information</button>
-
-        <button class="nav-button" data-page="achievements"
-            onclick="showPage('achievements')">Achievements</button>
-
-        <button class="nav-button" data-page="parents"
-            onclick="showPage('parents')">Parents</button>
-
-        <button class="nav-button" data-page="surprise"
-            onclick="showPage('surprise')">Surprise</button>
-    </nav>
-</header>
-
-<!-- MAIN CONTENT -->
-<main class="page-stage">
-
-    <!-- HOME PAGE -->
-    <section class="page active" id="home">
-
-        <div class="home-layout">
-
-            <div class="home-text">
-                <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
-
-                <h1>
-                    Hello, I'm <span>Glaiza Miel G. Manipon</span>
-                </h1>
-
-                <p class="intro">
-                    A Bachelor of Science in Information Technology student
-                    who enjoys learning, exploring technology, and improving
-                    my skills. I also love writing articles, especially sports
-                    articles, where I can share stories and highlight the
-                    achievements of athletes.
-                </p>
-
-                <p class="tagline">
-                    Student | Future IT Professional | Future Writer
-                </p>
-
-                <button class="primary-button"
-                    onclick="showPage('personal')">
-                    Get to know me →
-                </button>
-            </div>
-
-            <div class="photo-frame">
-                <img src="photo.jpg" alt="My Profile Picture">
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- PERSONAL INFORMATION PAGE -->
-    <section class="page" id="personal">
-
-        <div class="personal-wrapper">
-
-            <div class="page-heading">
-                <p class="eyebrow">GET TO KNOW ME</p>
-                <h1>Personal Information</h1>
-                <p>
-                    A little introduction to who I am, what I value,
-                    and what I enjoy.
-                </p>
-            </div>
-
-            <div class="two-column">
-
-                <!-- LEFT COLUMN -->
-                <article class="content-column">
-
-                    <h2>About Me</h2>
-
-                    <p>
-                        Hi! I'm Glaiza Miel G. Manipon, a student who enjoys
-                        learning new things, exploring technology, and
-                        discovering different ways to improve my skills.
-                        I also enjoy writing, especially sports articles.
-                        I believe every experience gives me a chance to
-                        learn something valuable.
-                    </p>
-
-                    <div class="info-list">
-
-                        <div class="info-row">
-                            <strong>Full Name</strong>
-                            <span>Glaiza Miel G. Manipon</span>
-                        </div>
-
-                        <div class="info-row">
-                            <strong>Birthday</strong>
-                            <span>May 15, 2008</span>
-                        </div>
-
-                        <div class="info-row">
-                            <strong>Hobbies</strong>
-                            <span>
-                                Writing articles, exploring technology,
-                                and learning new things
-                            </span>
-                        </div>
-
-                        <div class="info-row">
-                            <strong>Interests</strong>
-                            <span>
-                                Information technology, sports writing,
-                                and creativity
-                            </span>
-                        </div>
-
-                    </div>
-                </article>
-
-
-                <!-- RIGHT COLUMN -->
-                <article class="content-column right-column">
-
-                    <h2>My Goals in Life</h2>
-
-                    <p>
-                        One of my goals is to finish my education and build
-                        a meaningful future in the IT industry. I want to
-                        improve my knowledge and creativity, gain experience,
-                        and develop skills that will open opportunities for
-                        my future. I know growth takes time, and I am willing
-                        to keep learning and working toward the life I want.
-                    </p>
-
-                    <div class="motto">
-
-                        <h2>My Motto</h2>
-
-                        <blockquote>
-                            “Small steps today can lead to a future I once
-                            only imagined.”
-                        </blockquote>
-
-                        <p>
-                            I will keep learning, stay curious, and trust
-                            the progress I make along the way.
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ACHIEVEMENTS PAGE -->
-    <section class="page" id="achievements">
-
-        <div class="page-content">
-
-            <div class="page-heading">
-                <p class="eyebrow">MILESTONES AND PROGRESS</p>
-                <h1>My Achievements</h1>
-                <p>
-                    Small and big accomplishments that remind me
-                    to keep doing my best.
-                </p>
-            </div>
-
-            <div class="achievement-layout">
-
-                <div class="achievement-symbol">🏅</div>
-
-                <article class="achievement-content">
-
-                    <h2>Academic Recognition</h2>
-
-                    <p>
-                        I am proud to have received honors since
-                        elementary school. These recognitions remind
-                        me that patience, effort, and consistency
-                        are important in reaching my goals.
-                    </p>
-
-                    <div class="achievement-note">
-                        <strong>What I learned:</strong>
-
-                        <span>
-                            Every achievement is a reminder to stay
-                            humble, keep learning, and continue improving.
-                        </span>
-                    </div>
-
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- PARENTS PAGE -->
-    <section class="page" id="parents">
-
-        <div class="page-content">
-
-            <div class="page-heading">
-                <p class="eyebrow">MY FAMILY</p>
-                <h1>My Parents</h1>
-                <p>
-                    The people whose love, guidance, and support
-                    mean a lot to me.
-                </p>
-            </div>
-
-            <div class="family-panel">
-
-                <div class="family-icon">🏡</div>
-
-                <h2>My Greatest Support</h2>
-
-                <p>
-                    My parents are an important part of my life.
-                    Their guidance and support inspire me to keep
-                    studying, work toward my dreams, and become
-                    a better person. I am grateful for the lessons
-                    they teach me and the encouragement they give me.
-                </p>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- SURPRISE PAGE -->
-    <section class="page" id="surprise">
-
-        <div class="surprise-panel">
-
-            <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
-
-            <div class="surprise-icon">🌷</div>
-
-            <h1>Thank You for Visiting!</h1>
-
-            <p>
-                This portfolio is a small reflection of my journey,
-                interests, and dreams. There is always more to learn,
-                more to discover, and more room to grow.
+    <!-- NAVIGATION BAR -->
+    <header>
+        <div class="logo">MY PORTFOLIO</div>
+
+        <nav>
+            <a href="index.html" class="active">HOME</a>
+            <a href="personal.html">PERSONAL INFORMATION</a>
+            <a href="achievements.html">ACHIEVEMENTS</a>
+        </nav>
+    </header>
+
+    <!-- HOMEPAGE -->
+    <main class="home">
+
+        <div class="home-text">
+            <p class="welcome">WELCOME TO MY PORTFOLIO!</p>
+
+            <h1>Hello, I'm <span>Glaiza Miel</span></h1>
+
+            <h2>Glaiza Miel G. Manipon</h2>
+
+            <p class="description">
+                A student who continues to learn, grow, and discover
+                new opportunities. This portfolio shares a little
+                about who I am, my experiences, and the achievements
+                I have gained throughout my journey.
             </p>
 
-            <p class="surprise-message">
-                Keep believing in your own progress!
-            </p>
-
-            <button class="primary-button"
-                onclick="showPage('home')">
-                Back to Home →
-            </button>
-
+            <a href="personal.html" class="explore-btn">
+                EXPLORE MY PORTFOLIO →
+            </a>
         </div>
-    </section>
 
-</main>
+        <div class="home-image">
+            <img src="photo.jpg" alt="My Profile Picture">
+        </div>
 
+    </main>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-    © 2026 Glaiza Miel G. Manipon | Personal Portfolio
-</footer>
-
-
-<!-- JAVASCRIPT NAVIGATION -->
-<script>
-
-function showPage(pageId) {
-
-    // Hide all pages
-    document.querySelectorAll(".page").forEach(page => {
-        page.classList.remove("active");
-    });
-
-    // Show selected page
-    document.getElementById(pageId).classList.add("active");
-
-    // Update navigation button
-    document.querySelectorAll(".nav-button").forEach(button => {
-        button.classList.remove("active");
-
-        if (button.dataset.page === pageId) {
-            button.classList.add("active");
-        }
-    });
-
-}
-
-</script>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Glaiza Miel G. Manipon | Personal Portfolio</p>
+    </footer>
 
 </body>
 </html>
