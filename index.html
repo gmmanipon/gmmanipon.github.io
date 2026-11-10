@@ -10,26 +10,21 @@
 
 <body>
 
-<!-- NAVIGATION -->
 <header>
     <nav>
-        <button class="nav-btn active"
-            onclick="showPage('home', this)">
+        <button class="nav-btn active" onclick="showPage('home', this)">
             HOME
         </button>
 
-        <button class="nav-btn"
-            onclick="showPage('personal', this)">
+        <button class="nav-btn" onclick="showPage('personal', this)">
             PERSONAL INFORMATION
         </button>
 
-        <button class="nav-btn"
-            onclick="showPage('achievements', this)">
+        <button class="nav-btn" onclick="showPage('achievements', this)">
             ACHIEVEMENTS
         </button>
     </nav>
 </header>
-
 
 <main>
 
@@ -39,14 +34,11 @@
         <div class="home-content">
 
             <div class="home-image">
-                <img src="photo.jpg" alt="Glaiza Miel">
+                <img src="photo.jpg" alt="Glaiza Miel's Photo">
             </div>
 
             <div class="home-text">
-
-                <p class="welcome">
-                    WELCOME TO MY PORTFOLIO
-                </p>
+                <p class="welcome">WELCOME TO MY PORTFOLIO</p>
 
                 <h1>Glaiza Miel G. Manipon</h1>
 
@@ -64,15 +56,13 @@
                     document.querySelectorAll('.nav-btn')[1])">
                     LEARN MORE
                 </button>
-
             </div>
 
         </div>
-
     </section>
 
 
-    <!-- PERSONAL INFORMATION PAGE -->
+    <!-- PERSONAL INFORMATION -->
     <section id="personal" class="page personal-page">
 
         <div class="about-heading">
@@ -81,9 +71,7 @@
 
         <div class="about-layout">
 
-            <!-- LEFT COLUMN -->
             <div class="about-left">
-
                 <h2>Personal Details</h2>
 
                 <div class="info-item">
@@ -110,41 +98,30 @@
                     <strong>Hobbies</strong>
                     <span>Creating Articles and Learning New Things</span>
                 </div>
-
             </div>
 
-
-            <!-- RIGHT COLUMN -->
             <div class="about-right">
 
                 <div class="info-card">
-
                     <h2>My Goals in Life</h2>
-
                     <p>
                         My goal is to finish my studies, improve my
                         skills, and become successful in my chosen
                         career. I want to make my family proud and
                         use my knowledge to help others.
                     </p>
-
                 </div>
 
                 <div class="info-card">
-
                     <h2>My Motto</h2>
-
                     <p class="motto">
                         "With faith, patience, and hard work,
                         I will turn my dreams into reality."
                     </p>
-
                 </div>
 
             </div>
-
         </div>
-
     </section>
 
 
@@ -155,84 +132,45 @@
             <p>MY ACHIEVEMENTS</p>
         </div>
 
-        <div class="achievement-layout">
+        <div class="achievement-container">
 
-            <!-- LEFT SIDE: ACHIEVEMENT DESCRIPTIONS -->
-            <div class="achievement-text">
-
-                <h2>My Journey and Achievements</h2>
-
-                <div class="achievement-description">
-
-                    <h3>🏅 Academic Honors</h3>
-
-                    <p>
-                        I have received academic honors since elementary
-                        school. These recognitions remind me of the
-                        importance of dedication, patience, and hard work.
-                    </p>
-
-                </div>
-
-
-                <div class="achievement-description">
-
-                    <h3>🎓 Elementary Graduate</h3>
-
-                    <p>
-                        Successfully completed my elementary education
-                        at Balatoc Elementary School.
-                    </p>
-
-                </div>
-
-
-                <div class="achievement-description">
-
-                    <h3>📚 Senior High School Graduate</h3>
-
-                    <p>
-                        Completed my Senior High School education
-                        under the STEM strand at Saint Louis High School
-                        of Balatoc, Inc.
-                    </p>
-
-                </div>
-
-
-                <div class="achievement-description">
-
-                    <h3>🌟 Personal Growth</h3>
-
-                    <p>
-                        Every challenge, experience, and lesson has
-                        helped me become a better and more determined
-                        student.
-                    </p>
-
-                </div>
-
+            <div class="achievement-card">
+                <div class="achievement-icon">🏅</div>
+                <h2>Academic Honors</h2>
+                <p>
+                    I have received academic honors since elementary
+                    school. These recognitions remind me of the
+                    importance of dedication, patience, and hard work.
+                </p>
             </div>
 
+            <div class="achievement-card">
+                <div class="achievement-icon">🎓</div>
+                <h2>Elementary Graduate</h2>
+                <p>
+                    Successfully completed my elementary education
+                    at Balatoc Elementary School.
+                </p>
+            </div>
 
-            <!-- RIGHT SIDE: FIVE PICTURES -->
-            <div class="achievement-images">
+            <div class="achievement-card">
+                <div class="achievement-icon">📚</div>
+                <h2>Senior High School Graduate</h2>
+                <p>
+                    Completed my Senior High School education
+                    under the STEM strand at Saint Louis High School
+                    of Balatoc, Inc.
+                </p>
+            </div>
 
-                <img src="achievement1.jpg"
-                    alt="Academic Honors">
-
-                <img src="achievement2.jpg"
-                    alt="Elementary Graduation">
-
-                <img src="achievement3.jpg"
-                    alt="Senior High School Graduation">
-
-                <img src="achievement4.jpg"
-                    alt="Personal Growth">
-
-                <img src="achievement5.jpg"
-                    alt="Achievement Photo">
-
+            <div class="achievement-card">
+                <div class="achievement-icon">🌟</div>
+                <h2>Personal Growth</h2>
+                <p>
+                    Every challenge, experience, and lesson has
+                    helped me become a better and more determined
+                    student.
+                </p>
             </div>
 
         </div>
@@ -242,30 +180,23 @@
 </main>
 
 
-<!-- JAVASCRIPT -->
 <script>
-
 function showPage(pageId, button) {
 
-    // Hide all pages
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
     });
 
-    // Show selected page
     document.getElementById(pageId).classList.add('active');
 
-    // Remove active navigation
     document.querySelectorAll('.nav-btn').forEach(btn => {
         btn.classList.remove('active');
     });
 
-    // Highlight selected navigation
     button.classList.add('active');
-
 }
-
 </script>
 
 </body>
 </html>
+
