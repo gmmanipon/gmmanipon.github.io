@@ -4,234 +4,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glaiza Miel | Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Glaiza Miel | Online Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4eee5;
+            color: #4b3628;
+        }
+
+        header {
+            background-color: #6f4e37;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav button {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        nav button:hover,
+        nav button.active {
+            background-color: #e8d5bd;
+            color: #4b3628;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .home-content {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .home-content img {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #b89b7b;
+        }
+
+        .home-text h1 {
+            font-size: 42px;
+            color: #6f4e37;
+            margin-bottom: 10px;
+        }
+
+        .home-text h2 {
+            font-size: 22px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .home-text p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .about-heading {
+            text-align: center;
+            font-size: 35px;
+            color: #6f4e37;
+            margin-bottom: 30px;
+        }
+
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .info-card {
+            background-color: #fffaf3;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(80, 55, 35, 0.12);
+            margin-bottom: 20px;
+        }
+
+        .info-card h2 {
+            color: #8b6246;
+            margin-bottom: 20px;
+            font-size: 23px;
+        }
+
+        .info-card p {
+            line-height: 1.8;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .info-card strong {
+            color: #6f4e37;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #8b6246;
+        }
+
+        @media (max-width: 700px) {
+            .about-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .home-text h1 {
+                font-size: 32px;
+            }
+
+            main {
+                margin: 20px auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <button class="active" onclick="showPage(0)">Home</button>
-        <button onclick="showPage(1)">Personal Information</button>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <button class="active" onclick="showPage('home', this)">
+                HOME
+            </button>
 
-<main>
+            <button onclick="showPage('personal', this)">
+                PERSONAL INFORMATION
+            </button>
+        </nav>
+    </header>
 
-    <!-- HOME PAGE -->
-    <section class="page active">
+    <main>
 
-        <div class="home-content">
+        <!-- HOME PAGE -->
+        <section id="home" class="page active">
+            <div class="home-content">
 
-            <div class="home-text">
-                <h3>HELLO! WELCOME</h3>
+                <img src="photo.jpg" alt="Glaiza Miel's Photo"
+                     onerror="this.style.display='none'">
 
-                <h1>I'm Glaiza Miel G. Manipon</h1>
-
-                <p>
-                    A Bachelor of Science in Information Technology student
-                    who is passionate about learning, exploring technology,
-                    and improving my skills. I also enjoy writing articles,
-                    especially sports articles, where I can share stories
-                    and highlight the achievements of athletes.
-                </p>
-
-                <p class="tagline">
-                    Student | Future IT Professional | Future Writer
-                </p>
-            </div>
-
-            <!-- PERSONAL PHOTO -->
-            <div class="photo-container">
-
-                <img id="profilePhoto"
-                     class="home-photo"
-                     alt="Glaiza Miel's Photo">
-
-                <div id="photoPlaceholder" class="photo-placeholder">
-                    <span class="camera-icon">📷</span>
-                    <p>Your photo will appear here.</p>
+                <div class="home-text">
+                    <h1>Glaiza Miel G. Manipon</h1>
+                    <h2>Future Writer</h2>
+                    <p>
+                        Welcome to my online portfolio!
+                        This website shares my personal information,
+                        experiences, achievements, and goals in life.
+                    </p>
                 </div>
 
             </div>
+        </section>
 
-        </div>
+        <!-- PERSONAL INFORMATION PAGE -->
+        <section id="personal" class="page">
 
-        <div class="bottom-navigation">
-            <button onclick="showPage(1)">Next →</button>
-        </div>
+            <h1 class="about-heading">PERSONAL INFORMATION</h1>
 
-    </section>
+            <div class="about-layout">
 
+                <!-- LEFT COLUMN -->
+                <div class="about-left">
 
-    <!-- PERSONAL INFORMATION PAGE -->
-    <section class="page personal-page">
+                    <div class="info-card">
+                        <h2>Personal Information</h2>
 
-        <div class="about-heading">
-            <span class="eyebrow">GET TO KNOW ME</span>
+                        <p><strong>Full Name:</strong>
+                            Glaiza Miel G. Manipon
+                        </p>
 
-            <h1>Personal Information</h1>
+                        <p><strong>Birthday:</strong>
+                            May 15, 2008
+                        </p>
 
-            <p>
-                A little introduction to who I am, what I value,
-                and the future I am working toward.
-            </p>
-        </div>
-
-        <div class="about-layout">
-
-            <!-- LEFT COLUMN -->
-            <div class="about-left">
-
-                <h2>Personal Information</h2>
-
-                <p class="introduction">
-                    Hi! I'm Glaiza Miel G. Manipon, a student who enjoys
-                    learning new things, exploring technology, and discovering
-                    different ways to improve my skills. I also love writing,
-                    especially sports articles, because it allows me to share
-                    stories and recognize the achievements of others.
-                </p>
-
-                <div class="information-list">
-
-                    <div class="info-row">
-                        <strong>Full Name</strong>
-                        <span>Glaiza Miel G. Manipon</span>
+                        <p><strong>Address:</strong>
+                            Skyview, Virac, Itogon, Benguet
+                        </p>
                     </div>
 
-                    <div class="info-row">
-                        <strong>Birthday</strong>
-                        <span>May 15, 2008</span>
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="about-right">
+
+                    <div class="info-card">
+                        <h2>My Goals in Life</h2>
+
+                        <p>
+                            My goal is to finish my studies, improve my
+                            skills, and become successful in my chosen
+                            career. I want to make my family proud and
+                            use my knowledge to help others.
+                        </p>
                     </div>
 
-                    <div class="info-row">
-                        <strong>Location</strong>
-                        <span>Skyview, Virac, Itogon, Benguet</span>
-                    </div>
+                    <div class="info-card">
+                        <h2>My Motto</h2>
 
-                    <div class="info-row">
-                        <strong>Hobbies</strong>
-                        <span>Writing articles, reading, learning, and exploring new things</span>
-                    </div>
-
-                    <div class="info-row">
-                        <strong>Interests</strong>
-                        <span>Technology, computers, sports writing, and creativity</span>
+                        <p class="quote">
+                            "With faith, patience, and hard work,
+                            I will turn my dreams into reality."
+                        </p>
                     </div>
 
                 </div>
 
             </div>
+        </section>
 
+    </main>
 
-            <!-- RIGHT COLUMN -->
-            <div class="about-right">
+    <script>
+        function showPage(pageId, button) {
 
-                <section class="goals-section">
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(function(page) {
+                page.classList.remove('active');
+            });
 
-                    <h2>My Goals in Life</h2>
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
 
-                    <p>
-                        I want to finish my education and build a meaningful
-                        career in the IT industry. I hope to use my knowledge
-                        and creativity to make useful things, continue improving
-                        my skills, and become more confident in what I do.
-                        I know that growth takes time, so I will keep learning,
-                        working hard, and trusting God's plan for my future.
-                    </p>
+            // Remove active style from all buttons
+            document.querySelectorAll('nav button').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
 
-                </section>
-
-
-                <section class="motto-section">
-
-                    <h2>My Motto</h2>
-
-                    <blockquote>
-                        “With faith, patience, and hard work, I will turn my dreams into reality.”
-                    </blockquote>
-
-                    <p>
-                        I will keep learning, stay determined, and trust every
-                        step of the journey that leads me closer to my goals.
-                    </p>
-
-                </section>
-
-            </div>
-
-        </div>
-
-        <div class="bottom-navigation">
-            <button onclick="showPage(0)">← Previous</button>
-        </div>
-
-    </section>
-
-</main>
-
-
-<script>
-
-/* SWITCH BETWEEN PAGES */
-function showPage(index) {
-
-    const pages = document.querySelectorAll(".page");
-    const buttons = document.querySelectorAll("nav button");
-
-    pages.forEach((page, i) => {
-        page.classList.toggle("active", i === index);
-    });
-
-    buttons.forEach((button, i) => {
-        button.classList.toggle("active", i === index);
-    });
-
-}
-
-
-/* AUTOMATIC PHOTO DETECTION */
-const possiblePhotos = [
-    "photo.jpg",
-    "photo.jpeg",
-    "photo.png",
-    "photo.webp",
-    "photo.JPG",
-    "photo.PNG"
-];
-
-function loadProfilePhoto(index = 0) {
-
-    const photo = document.getElementById("profilePhoto");
-    const placeholder = document.getElementById("photoPlaceholder");
-
-    if (index >= possiblePhotos.length) {
-        photo.style.display = "none";
-        placeholder.style.display = "block";
-
-        placeholder.innerHTML =
-            "📷<br>Photo not found.<br>Check your photo filename and folder.";
-
-        return;
-    }
-
-    photo.onerror = function() {
-        loadProfilePhoto(index + 1);
-    };
-
-    photo.onload = function() {
-        photo.style.display = "block";
-        placeholder.style.display = "none";
-    };
-
-    photo.src = possiblePhotos[index];
-}
-
-loadProfilePhoto();
-
-</script>
+            // Highlight selected button
+            button.classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
