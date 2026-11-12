@@ -2,293 +2,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glaiza Miel | Personal Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glaiza Miel | Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVIGATION BAR -->
-<header>
-    <div class="logo">GLAIZA MIEL.</div>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <div class="logo">GLAIZA MIEL.</div>
 
-    <nav>
-        <a href="#" class="active"
-           onclick="showPage('home', this); return false;">
-           HOME
-        </a>
+        <nav>
+            <a href="#" class="active"
+               onclick="showPage('home', this); return false;">
+                HOME
+            </a>
 
-        <a href="#"
-           onclick="showPage('personal', this); return false;">
-           PERSONAL INFORMATION
-        </a>
+            <a href="#"
+               onclick="showPage('personal', this); return false;">
+                PERSONAL INFORMATION
+            </a>
 
-        <a href="#"
-           onclick="showPage('achievements', this); return false;">
-           ACHIEVEMENTS
-        </a>
-    </nav>
-</header>
+            <a href="#"
+               onclick="showPage('achievements', this); return false;">
+                ACHIEVEMENTS
+            </a>
+        </nav>
+    </header>
 
-<!-- HOME PAGE -->
-<section id="home" class="page active">
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
 
-    <div class="home-text">
-        <p class="welcome">WELCOME TO MY PORTFOLIO!</p>
+        <div class="home-text">
+            <p class="welcome">WELCOME TO MY PORTFOLIO!</p>
 
-        <h1>Hello, I'm <span>Glaiza Miel</span></h1>
+            <h1>Hello, I'm <span>Glaiza Miel</span></h1>
 
-        <h2>Glaiza Miel G. Manipon</h2>
+            <h2>Glaiza Miel G. Manipon</h2>
 
-        <p class="description">
-            A student who continues to learn, grow, and discover
-            new opportunities. This portfolio shares a little
-            about who I am, my experiences, and the achievements
-            I have gained throughout my journey.
-        </p>
-
-        <a class="explore-btn"
-           onclick="showPage('personal',
-           document.querySelectorAll('nav a')[1])">
-           EXPLORE MY PORTFOLIO →
-        </a>
-    </div>
-
-    <div class="home-image">
-        <img src="photo.jpg" alt="My Profile Picture">
-    </div>
-
-</section>
-
-<!-- PERSONAL INFORMATION PAGE -->
-<section id="personal" class="page">
-
-    <div class="personal-heading">
-        <p>GET TO KNOW ME</p>
-
-        <h1>Personal Information</h1>
-
-        <p class="subtitle">
-            A little introduction to who I am, what I value,
-            and the future I am working toward.
-        </p>
-    </div>
-
-    <div class="personal-container">
-
-        <div class="personal-left">
-
-            <h2>Personal Information</h2>
-
-            <p class="intro">
-                Hi! I'm Glaiza Miel G. Manipon, a student who enjoys
-                exploring technology, learning new things, and
-                discovering different ways to improve my skills.
-                I like being creative, trying new experiences,
-                and challenging myself to grow. I believe every
-                experience gives me a chance to learn something valuable.
+            <p class="description">
+                A student who continues to learn, grow, and discover
+                new opportunities. This portfolio shares a little
+                about who I am, my experiences, and the achievements
+                I have gained throughout my journey.
             </p>
 
-            <div class="info-list">
+            <a href="#" class="explore-btn"
+               onclick="showPage('personal', document.querySelectorAll('nav a')[1]); return false;">
+                EXPLORE MY PORTFOLIO →
+            </a>
+        </div>
 
-                <div class="info-row">
-                    <strong>Full Name</strong>
-                    <span>Glaiza Miel G. Manipon</span>
+        <div class="home-image">
+            <img src="photo.jpg" alt="My Profile Picture">
+        </div>
+
+    </section>
+
+    <!-- PERSONAL INFORMATION PAGE -->
+    <section id="personal" class="page">
+
+        <div class="personal-heading">
+            <p>GET TO KNOW ME</p>
+
+            <h1>Personal Information</h1>
+
+            <p class="subtitle">
+                A little introduction to who I am, what I value,
+                and the future I am working toward.
+            </p>
+        </div>
+
+        <div class="personal-container">
+
+            <div class="personal-left">
+
+                <h2>Personal Information</h2>
+
+                <p class="intro">
+                    Hi! I'm Glaiza Miel G. Manipon, a student who enjoys
+                    exploring technology, learning new things, and
+                    discovering different ways to improve my skills.
+                    I like being creative, trying new experiences,
+                    and challenging myself to grow. I believe every
+                    experience gives me a chance to learn something valuable.
+                </p>
+
+                <div class="info-list">
+
+                    <div class="info-row">
+                        <strong>Full Name</strong>
+                        <span>Glaiza Miel G. Manipon</span>
+                    </div>
+
+                    <div class="info-row">
+                        <strong>Birthday</strong>
+                        <span>May 15, 2008</span>
+                    </div>
+
+                    <div class="info-row">
+                        <strong>Nationality</strong>
+                        <span>Filipino</span>
+                    </div>
+
+                    <div class="info-row">
+                        <strong>Location</strong>
+                        <span>Skyview, Virac, Itogon, Benguet</span>
+                    </div>
+
+                    <div class="info-row">
+                        <strong>Hobbies</strong>
+                        <span>Writing articles, reading, and exploring new things</span>
+                    </div>
+
+                    <div class="info-row">
+                        <strong>Interests</strong>
+                        <span>Technology, computers, sports, and creativity</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="personal-right">
+
+                <div class="goals">
+                    <h2>My Goals in Life</h2>
+
+                    <p>
+                        I want to build a meaningful career in the IT
+                        industry where I can use my knowledge and
+                        creativity to make useful things. I hope to
+                        gain experience, become more confident in my
+                        abilities, and develop skills that will open
+                        opportunities for my future. I know growth
+                        takes time, and I am willing to keep learning
+                        and working toward the life I want.
+                    </p>
                 </div>
 
-                <div class="info-row">
-                    <strong>Birthday</strong>
-                    <span>May 15, 2008</span>
-                </div>
+                <div class="motto">
+                    <h2>My Motto</h2>
 
-                <div class="info-row">
-                    <strong>Nationality</strong>
-                    <span>Filipino</span>
-                </div>
+                    <blockquote>
+                        “With faith, determination, and hard work,
+                        anything is possible.”
+                    </blockquote>
 
-                <div class="info-row">
-                    <strong>Hobbies</strong>
-                    <span>Writing articles, reading, and exploring new things</span>
-                </div>
-
-                <div class="info-row">
-                    <strong>Interests</strong>
-                    <span>Technology, computers, sports, and creativity</span>
+                    <p class="closing">
+                        I will continue to trust God, work hard,
+                        and believe in myself as I pursue my dreams.
+                    </p>
                 </div>
 
             </div>
         </div>
 
-        <div class="personal-right">
+    </section>
 
-            <div class="goals">
-                <h2>My Goals in Life</h2>
+    <!-- ACHIEVEMENTS PAGE -->
+    <section id="achievements" class="page">
 
-                <p>
-                    I want to build a meaningful career in the IT
-                    industry where I can use my knowledge and
-                    creativity to make useful things. I hope to
-                    gain experience, become more confident in my
-                    abilities, and develop skills that will open
-                    opportunities for my future. I know growth
-                    takes time, and I am willing to keep learning
-                    and working toward the life I want.
-                </p>
-            </div>
+        <div class="achievement-heading">
+            <p>MY JOURNEY AND PROGRESS</p>
 
-            <div class="motto">
-                <h2>My Motto</h2>
+            <h1>My Achievements</h1>
 
-                <blockquote>
-                    “With faith, determination, and hard work,
-                    anything is possible.”
-                </blockquote>
-
-                <p class="closing">
-                    I will continue to trust God, work hard,
-                    and believe in myself as I pursue my dreams.
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-</section>
-
-<!-- ACHIEVEMENTS PAGE -->
-<section id="achievements" class="page">
-
-    <div class="achievement-heading">
-
-        <p>MY JOURNEY AND PROGRESS</p>
-
-        <h1>My Achievements</h1>
-
-        <p class="subtitle">
-            A collection of my achievements from elementary
-            to senior high school.
-        </p>
-
-    </div>
-
-    <div class="achievement-container">
-
-        <!-- LEFT SIDE: INFORMATION -->
-        <div class="achievement-info">
-
-            <h2>My Academic Journey</h2>
-
-            <p class="achievement-intro">
-                Here's a look at my achievements starting from
-                my elementary years at Balatoc Elementary School
-                until I graduated from senior high school at
-                St. Louis High School of Balatoc, Inc.
+            <p class="subtitle">
+                A collection of my achievements from elementary
+                to senior high school.
             </p>
+        </div>
 
-            <div class="school-achievement">
+        <div class="achievement-container">
 
-                <h3>Elementary School</h3>
+            <!-- LEFT SIDE: ACHIEVEMENT INFORMATION -->
+            <div class="achievement-info">
 
-                <p class="school-name">
-                    Balatoc Elementary School
-                </p>
+                <h2>My Academic Journey</h2>
 
-                <ul>
-                    <li>Consistent With Honors</li>
-                    <li>Christian Values Award</li>
-                    <li>Best in Conduct</li>
-                </ul>
-
-            </div>
-
-            <div class="school-achievement">
-
-                <h3>Junior High School</h3>
-
-                <p class="school-name">
+                <p class="achievement-intro">
+                    Here's a look at my achievements starting from
+                    my elementary years at Balatoc Elementary School
+                    until I graduated from senior high school at
                     St. Louis High School of Balatoc, Inc.
                 </p>
 
-                <ul>
-                    <li>Consistent With Honors</li>
-                    <li>Campus Journalist</li>
-                    <li>Maiden of the Altar</li>
-                </ul>
+                <div class="school-achievement">
+
+                    <h3>Elementary School</h3>
+
+                    <p class="school-name">
+                        Balatoc Elementary School
+                    </p>
+
+                    <ul>
+                        <li>Consistent With Honors</li>
+                        <li>Christian Values Award</li>
+                        <li>Best in Conduct</li>
+                    </ul>
+
+                </div>
+
+                <div class="school-achievement">
+
+                    <h3>Junior High School</h3>
+
+                    <p class="school-name">
+                        St. Louis High School of Balatoc, Inc.
+                    </p>
+
+                    <ul>
+                        <li>Consistent With Honors</li>
+                        <li>Campus Journalist</li>
+                        <li>Maiden of the Altar</li>
+                    </ul>
+
+                </div>
+
+                <div class="school-achievement">
+
+                    <h3>Senior High School</h3>
+
+                    <p class="school-name">
+                        St. Louis High School of Balatoc, Inc.
+                    </p>
+
+                    <ul>
+                        <li>Consistent With Honors</li>
+                        <li>Best in Research</li>
+                        <li>Campus Journalist</li>
+                        <li>Maiden of the Altar</li>
+                    </ul>
+
+                </div>
 
             </div>
 
-            <div class="school-achievement">
+            <!-- RIGHT SIDE: FOUR ACHIEVEMENT IMAGES -->
+            <div class="achievement-gallery">
 
-                <h3>Senior High School</h3>
+                <div class="gallery-item">
+                    <img src="achievements1.jpg"
+                         alt="Elementary school achievement">
+                </div>
 
-                <p class="school-name">
-                    St. Louis High School of Balatoc, Inc.
-                </p>
+                <div class="gallery-item">
+                    <img src="achievements2.jpg"
+                         alt="Junior high school achievement">
+                </div>
 
-                <ul>
-                    <li>Consistent With Honors</li>
-                    <li>Best in Research</li>
-                    <li>Campus Journalist</li>
-                    <li>Maiden of the Altar</li>
-                </ul>
+                <div class="gallery-item">
+                    <img src="achievements3.jpg"
+                         alt="Senior high school achievement">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="achievements4.jpg"
+                         alt="Academic certificate and award">
+                </div>
 
             </div>
 
         </div>
 
-        <!-- RIGHT SIDE: ACHIEVEMENTS COLLAGE -->
-        <div class="achievement-image">
+    </section>
 
-            <img src="achivements.png"
-                 alt="Collection of my academic certificates and achievements">
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Glaiza Miel G. Manipon | IT Personal Portfolio
+    </footer>
 
-        </div>
+    <!-- PAGE NAVIGATION SCRIPT -->
+    <script>
+        function showPage(pageId, clickedLink) {
 
-    </div>
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
 
-</section>
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
 
-<!-- FOOTER -->
-<footer>
-    © 2026 Glaiza Miel G. Manipon | IT Personal Portfolio
-</footer>
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
 
-<!-- PAGE NAVIGATION SCRIPT -->
-<script>
-function showPage(pageId, clickedLink) {
+            // Remove active navigation style
+            const navLinks = document.querySelectorAll('nav a');
 
-    // Hide all pages
-    const pages = document.querySelectorAll('.page');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
 
-    pages.forEach(page => {
-        page.classList.remove('active');
-    });
-
-    // Show selected page
-    document.getElementById(pageId).classList.add('active');
-
-    // Remove active navigation style
-    const navLinks = document.querySelectorAll('nav a');
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-    });
-
-    // Highlight selected navigation
-    if (clickedLink) {
-        clickedLink.classList.add('active');
-    }
-}
-</script>
+            // Highlight selected navigation
+            if (clickedLink) {
+                clickedLink.classList.add('active');
+            }
+        }
+    </script>
 
 </body>
 </html>
-
-
-
-
-
