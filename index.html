@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glaiza Miel G. Manipon | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #eee5d8;
+            color: #4c4036;
+            overflow: hidden;
+        }
+
+        header {
+            height: 70px;
+            padding: 0 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #e5d7c5;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            color: #5b4a3d;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.3px;
+            cursor: pointer;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a.active,
+        nav a:hover {
+            border-bottom-color: #9b7658;
+        }
+
+        .page {
+            display: none;
+            height: calc(100vh - 113px);
+            padding: 35px 8%;
+        }
+
+        .page.active {
+            display: flex;
+        }
+
+        #home {
+            align-items: center;
+            justify-content: space-between;
+            gap: 55px;
+        }
+
+        .home-text {
+            flex: 1;
+            max-width: 590px;
+        }
+
+        .home-text .welcome {
+            color: #98785c;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .home-text h1 {
+            font-size: clamp(38px, 5vw, 64px);
+            line-height: 1.12;
+            margin-bottom: 16px;
+            color: #514236;
+        }
+
+        .home-text h2 {
+            font-size: 23px;
+            font-weight: normal;
+            color: #98785c;
+            margin-bottom: 20px;
+        }
+
+        .home-text p {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            max-width: 540px;
+        }
+
+        .explore-button {
+            display: inline-block;
+            margin-top: 28px;
+            padding: 13px 27px;
+            background: #8b6d52;
+            color: #fffaf4;
+            border: none;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .home-image {
+            flex: 0 0 36%;
+            max-width: 390px;
+            height: min(65vh, 470px);
+            overflow: hidden;
+        }
+
+        .home-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        #personal {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .personal-container {
+            width: 100%;
+            max-width: 1120px;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .section-heading {
+            font-size: 31px;
+            color: #594737;
+            margin-bottom: 25px;
+        }
+
+        .personal-left .info-row {
+            display: grid;
+            grid-template-columns: 145px 1fr;
+            gap: 12px;
+            padding: 11px 0;
+            border-bottom: 1px solid #d7c7b5;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .info-row .info-label {
+            color: #8b6d52;
+            font-weight: bold;
+        }
+
+        .personal-right {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .personal-right h2 {
+            font-size: 24px;
+            margin-bottom: 13px;
+            color: #594737;
+        }
+
+        .hobbies-interests {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d7c7b5;
+        }
+
+        .hobbies-interests .info-row {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            gap: 12px;
+            padding: 7px 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .goals {
+            padding-bottom: 25px;
+            border-bottom: 1px solid #d7c7b5;
+        }
+
+        .goals p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .motto blockquote {
+            color: #8b6d52;
+            font-size: 27px;
+            line-height: 1.4;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        #achievements {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .achievement-heading {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .achievement-intro {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 auto 25px;
+            max-width: 800px;
+        }
+
+        .achievement-content {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 30px;
+            align-items: center;
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .achievement-description h2 {
+            color: #8b6d52;
+            font-size: 23px;
+            margin-bottom: 13px;
+        }
+
+        .achievement-description p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .achievement-images {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            width: 100%;
+            height: min(48vh, 350px);
+        }
+
+        .achievement-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        footer {
+            height: 43px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e5d7c5;
+            color: #78624e;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 800px) {
+            body {
+                overflow: auto;
+            }
+
+            header {
+                height: auto;
+                min-height: 70px;
+                padding: 15px 5%;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 10px;
+            }
+
+            .page {
+                min-height: calc(100vh - 113px);
+                height: auto;
+                padding: 35px 6%;
+            }
+
+            #home {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .home-image {
+                flex: none;
+                width: min(75vw, 330px);
+                height: 330px;
+            }
+
+            .home-text p {
+                margin: auto;
+            }
+
+            .personal-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .achievement-content {
+                grid-template-columns: 1fr;
+            }
+
+            .achievement-images {
+                grid-template-columns: repeat(2, 1fr);
+                height: auto;
+            }
+
+            .achievement-images img {
+                height: 220px;
+            }
+
+            #achievements {
+                display: none;
+            }
+
+            #achievements.active {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .personal-left .info-row {
+                grid-template-columns: 115px 1fr;
+                font-size: 12px;
+            }
+
+            .achievement-images img {
+                height: 160px;
+            }
+
+            .motto blockquote {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">GLAIZA MIEL</div>
+        <nav>
+            <a class="active" onclick="showPage('home', this)">HOME</a>
+            <a onclick="showPage('personal', this)">PERSONAL INFORMATION</a>
+            <a onclick="showPage('achievements', this)">ACHIEVEMENTS</a>
+        </nav>
+    </header>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
+        <div class="home-text">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+            <h1>Hello, I'm<br>Glaiza Miel.</h1>
+            <h2>Glaiza Miel G. Manipon</h2>
+            <p>
+                I am a student who continues to learn, grow, and discover my abilities.
+                I value every experience, do my best in my studies, and appreciate the
+                people who support me along the way. This portfolio shares my personal
+                background, interests, goals, and achievements.
+            </p>
+            <button class="explore-button" onclick="showPage('personal', document.querySelectorAll('nav a')[1])">
+                EXPLORE MORE
+            </button>
+        </div>
+
+        <div class="home-image">
+            <img src="photo.jpg" alt="Photo of Glaiza Miel">
+        </div>
+    </section>
+
+    <!-- PERSONAL INFORMATION PAGE -->
+    <section id="personal" class="page">
+        <div class="personal-container">
+            <div class="personal-left">
+                <h1 class="section-heading">Personal Information</h1>
+
+                <div class="info-row">
+                    <span class="info-label">Full Name</span>
+                    <span>Glaiza Miel G. Manipon</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Birthday</span>
+                    <span>May 15, 2008</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Age</span>
+                    <span>18 years old</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Nationality</span>
+                    <span>Filipino</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Address</span>
+                    <span>Skyview, Virac, Itogon, Benguet</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Contact Number</span>
+                    <span>09564624448</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email Address</span>
+                    <span>maniponglaiza41@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="personal-right">
+                <div class="hobbies-interests">
+                    <h2>Hobbies and Interests</h2>
+                    <div class="info-row">
+                        <span class="info-label">Hobbies</span>
+                        <span>Writing articles, reading, and exploring new things</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Interests</span>
+                        <span>Technology, computers, sports, and creativity</span>
+                    </div>
+                </div>
+
+                <div class="goals">
+                    <h2>My Goals in Life</h2>
+                    <p>
+                        I want to build a meaningful career in Information Technology
+                        where I can use my knowledge and creativity to make a positive
+                        contribution. I hope to gain more experience, become confident
+                        in my abilities, improve my skills, and never stop learning.
+                    </p>
+                </div>
+
+                <div class="motto">
+                    <h2>My Motto</h2>
+                    <blockquote>
+                        “With faith, determination, and hard work,
+                        anything is possible.”
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS PAGE -->
+    <section id="achievements" class="page">
+        <h1 class="achievement-heading">My Achievements</h1>
+        <p class="achievement-intro">
+            Here's a look at my achievements, starting from my elementary years at
+            Balatoc Elementary School up until my graduation from senior high school
+            at St. Louis High School of Balatoc, Inc.
+        </p>
+
+        <div class="achievement-content">
+            <div class="achievement-description">
+                <h2>School Achievements</h2>
+                <p><strong>Elementary</strong><br>
+                    Balatoc Elementary School<br>
+                    Consistent With Honors<br>
+                    Christian Values Award<br>
+                    Best in Conduct
+                </p>
+                <p><strong>Junior High School</strong><br>
+                    St. Louis High School of Balatoc, Inc.<br>
+                    Consistent With Honors<br>
+                    Campus Journalist<br>
+                    Maiden of the Altar
+                </p>
+                <p><strong>Senior High School</strong><br>
+                    St. Louis High School of Balatoc, Inc.<br>
+                    Consistent With Honors<br>
+                    Best in Research<br>
+                    Campus Journalist<br>
+                    Maiden of the Altar
+                </p>
+            </div>
+
+            <div class="achievement-images">
+                <img src="achievements1.jpg" alt="Achievement photo 1">
+                <img src="achievements2.jpg" alt="Achievement photo 2">
+                <img src="achievements3.jpg" alt="Achievement photo 3">
+                <img src="achievements4.jpg" alt="Achievement photo 4">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 GLAIZA MIEL G. MANIPON | PERSONAL PORTFOLIO
+    </footer>
+
+    <script>
+        function showPage(pageId, clickedLink) {
+            document.querySelectorAll('.page').forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            document.getElementById(pageId).classList.add('active');
+
+            document.querySelectorAll('nav a').forEach(function(link) {
+                link.classList.remove('active');
+            });
+
+            if (clickedLink) {
+                clickedLink.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
