@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -64,8 +65,13 @@ nav a.active {
 }
 
 @keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* HOME PAGE */
@@ -136,7 +142,7 @@ nav a.active {
     overflow: hidden;
     border: 6px solid #e8d9c8;
     border-radius: 150px 150px 12px 12px;
-    box-shadow: 0 10px 25px rgba(80,60,40,0.15);
+    box-shadow: 0 10px 25px rgba(80, 60, 40, 0.15);
 }
 
 .home-image img {
@@ -271,7 +277,7 @@ nav a.active {
     display: none;
     flex-direction: column;
     justify-content: center;
-    padding: 15px 6%;
+    padding: 15px 5%;
 }
 
 #achievements.active {
@@ -279,7 +285,7 @@ nav a.active {
 }
 
 .achievement-heading {
-    max-width: 1094px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto 15px;
 }
@@ -305,80 +311,91 @@ nav a.active {
     letter-spacing: 0;
 }
 
-/* ACHIEVEMENT CONTENT */
+/* ACHIEVEMENTS LAYOUT: 1/4 TEXT, 3/4 IMAGES */
 .achievement-container {
     width: 100%;
-    max-width: 1094px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 1fr 3fr;
     align-items: center;
-    gap: 35px;
+    gap: 25px;
     min-height: 0;
 }
 
-/* LEFT SIDE INFORMATION */
+/* LEFT SIDE: ACHIEVEMENT TEXT */
 .achievement-info {
-    padding-right: 25px;
+    padding-right: 20px;
     border-right: 1px solid #cbb6a0;
 }
 
 .achievement-info h2 {
     color: #82634d;
-    font-size: 23px;
+    font-size: 21px;
     margin-bottom: 12px;
 }
 
 .achievement-intro {
     color: #756657;
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 18px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 .school-achievement {
-    margin-bottom: 14px;
+    margin-bottom: 13px;
 }
 
 .school-achievement h3 {
     color: #a98769;
-    font-size: 17px;
-    margin-bottom: 5px;
+    font-size: 15px;
+    margin-bottom: 4px;
 }
 
 .school-name {
     color: #826b58;
-    font-size: 12px;
-    margin-bottom: 6px;
+    font-size: 11px;
+    margin-bottom: 5px;
 }
 
 .school-achievement ul {
-    padding-left: 20px;
+    padding-left: 17px;
     color: #594637;
-    font-size: 13px;
-    line-height: 1.7;
+    font-size: 12px;
+    line-height: 1.6;
 }
 
-/* ACHIEVEMENTS IMAGE */
-.achievement-image {
+/* RIGHT SIDE: FOUR ACHIEVEMENT IMAGES */
+.achievement-gallery {
     width: 100%;
-    height: min(65vh, 620px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background: #eee3d5;
-    border: 5px solid #e8d9c8;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(80,60,40,0.12);
+    height: 55vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
 }
 
-.achievement-image img {
-    display: block;
+.gallery-item {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    background: #eee3d5;
+    border: 4px solid #e8d9c8;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(80, 60, 40, 0.12);
+}
+
+.achievement-gallery img {
+    width: 100%;
+    height: 100%;
+    display: block;
     object-fit: contain;
     object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
 }
 
 /* FOOTER */
@@ -393,7 +410,7 @@ footer {
     font-size: 13px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE DESIGN */
 @media (max-width: 800px) {
 
     header {
@@ -421,6 +438,7 @@ footer {
         height: calc(100vh - 133px);
     }
 
+    /* HOME */
     #home {
         flex-direction: column-reverse;
         justify-content: center;
@@ -446,6 +464,7 @@ footer {
         font-size: 13px;
     }
 
+    /* PERSONAL INFORMATION */
     #personal {
         padding: 15px 7%;
     }
@@ -485,6 +504,7 @@ footer {
         margin: 10px 0;
     }
 
+    /* ACHIEVEMENTS */
     #achievements {
         padding: 10px 5px;
     }
@@ -503,7 +523,7 @@ footer {
     }
 
     .achievement-container {
-        grid-template-columns: 0.9fr 1.1fr;
+        grid-template-columns: 1fr 2fr;
         gap: 10px;
     }
 
@@ -512,11 +532,11 @@ footer {
     }
 
     .achievement-info h2 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .achievement-intro {
-        font-size: 11px;
+        font-size: 10px;
         margin-bottom: 8px;
     }
 
@@ -525,15 +545,20 @@ footer {
     }
 
     .school-achievement h3 {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .school-name,
     .school-achievement ul {
-        font-size: 10px;
+        font-size: 9px;
     }
 
-    .achievement-image {
-        height: 55vh;
+    .achievement-gallery {
+        height: 45vh;
+        gap: 6px;
+    }
+
+    .gallery-item {
+        border-width: 2px;
     }
 }
